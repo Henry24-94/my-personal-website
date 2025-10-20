@@ -1,74 +1,3 @@
-/* Remove default list style and spacing */
-.navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-    overflow: hidden;
-    text-align: center;  /* Centers the navigation bar */
-}
-
-/* Make list items display horizontally */
-.navbar li {
-    display: inline-block;
-}
-
-/* Style the links */
-.navbar li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Change background on hover */
-.navbar li a:hover {
-    background-color: #111;
-}
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <nav>
-        <ul class="navbar">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html" class="active">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <h1>My Projects</h1>
-        <p>Here are some of the projects I have worked on:</p>
-
-        <ul class="project-list">
-            <li>
-                <strong><a href="https://github.com/Henry24-94/Retail-Store-System" target="_blank">Retail Store Management System</a></strong>  
-                — A C++ console application to manage products, stock, and sales.
-            </li>
-
-            <li>
-                <strong><a href="https://github.com/Henry24-94/Java-Calculator" target="_blank">Calculator GUI</a></strong>  
-                — A Java Swing application that performs basic arithmetic operations.
-            </li>
-
-            <li>
-                <strong><a href="https://henry24-94.github.io/web-projects/" target="_blank">Web Development Practice</a></strong>  
-                — HTML and CSS projects including personal websites and small UI designs.
-            </li>
-        </ul>
-    </main>
-</body>
-</html>
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -76,7 +5,7 @@ body {
     min-height: 100vh;
 }
 
-/* Navigation bar styling */
+/* Vertical Navigation Bar */
 nav {
     background-color: #222;
     width: 200px;
@@ -87,11 +16,10 @@ nav {
     top: 0;
 }
 
-/* Navigation list styling */
 .navbar {
-    list-style-type: none;
-    padding: 0;
+    list-style: none;
     margin: 0;
+    padding: 0;
 }
 
 .navbar li {
@@ -110,9 +38,8 @@ nav {
     background-color: #555;
 }
 
-/* Main content styling */
+/* Page content */
 h1, p, ul {
-    margin-left: 230px; /* space for sidebar */
+    margin-left: 230px; /* move content to the right of the sidebar */
     padding: 10px;
 }
-
