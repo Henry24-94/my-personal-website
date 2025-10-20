@@ -69,3 +69,50 @@
     </main>
 </body>
 </html>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Navigation bar styling */
+nav {
+    background-color: #222;
+    width: 200px;
+    height: 100vh;
+    padding-top: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+/* Navigation list styling */
+.navbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 20px 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    transition: background 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+/* Main content styling */
+h1, p, ul {
+    margin-left: 230px; /* space for sidebar */
+    padding: 10px;
+}
+
