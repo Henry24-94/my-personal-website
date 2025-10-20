@@ -5,7 +5,7 @@ Welcome to my personal website! 🌐
 This website contains information about me:
 
 - **Name:** Solomon Fentaw Temesgen
-- **Education:** 3nd-year Computer Science student
+- **Education:** 3rd-year Computer Science student
 - **Location:** Ethiopia
 - **Interests:** Programming, Web Development, Technology
 
