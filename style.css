@@ -27,3 +27,45 @@
 .navbar li a:hover {
     background-color: #111;
 }
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>My Projects</h1>
+        <p>Here are some of the projects I have worked on:</p>
+
+        <ul class="project-list">
+            <li>
+                <strong><a href="https://github.com/Henry24-94/Retail-Store-System" target="_blank">Retail Store Management System</a></strong>  
+                — A C++ console application to manage products, stock, and sales.
+            </li>
+
+            <li>
+                <strong><a href="https://github.com/Henry24-94/Java-Calculator" target="_blank">Calculator GUI</a></strong>  
+                — A Java Swing application that performs basic arithmetic operations.
+            </li>
+
+            <li>
+                <strong><a href="https://henry24-94.github.io/web-projects/" target="_blank">Web Development Practice</a></strong>  
+                — HTML and CSS projects including personal websites and small UI designs.
+            </li>
+        </ul>
+    </main>
+</body>
+</html>
