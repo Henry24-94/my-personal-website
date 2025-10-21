@@ -3,6 +3,7 @@ body {
     margin: 0;
     display: flex;
     height: 100vh;
+    background-color: #fff;
 }
 
 /* Vertical Navigation */
@@ -12,7 +13,8 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* centers vertically */
+    justify-content: flex-start;
+    padding-top: 40px;
 }
 
 .navbar {
@@ -24,7 +26,7 @@ nav {
 }
 
 .navbar li {
-    margin: 15px 0;
+    margin: 20px 0;
 }
 
 .navbar a {
@@ -44,12 +46,46 @@ nav {
 
 /* Active page highlight */
 .navbar a.active {
-    background-color: #04AA6D; /* green highlight */
+    background-color: #04AA6D;
     font-weight: bold;
 }
 
-/* Page content */
-main {
+/* Main content area */
+main, header, section {
     flex-grow: 1;
-    padding: 40px;
+    padding: 60px;
+    max-width: 1000px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Contact section */
+#contact {
+    margin-top: 40px;
+}
+
+#contact h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#contact ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    left: 260px;
+    font-size: 14px;
+    color: #555;
 }
