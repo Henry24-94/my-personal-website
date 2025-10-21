@@ -1,41 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Solomon's Personal Website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects | Solomon</title>
+  <style>
+    /* Same CSS as above for consistent appearance */
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", Roboto, Arial, sans-serif; color:#111; background:#fff; }
+    .page { display:flex; min-height:100vh; }
+    nav.sidebar { width:220px; background:#222; color:#fff; display:flex; align-items:center; justify-content:center; padding:40px 0; position:fixed; top:0; left:0; bottom:0; }
+    nav.sidebar .navbar { list-style:none; padding:0; margin:0; width:100%; text-align:center; }
+    nav.sidebar .navbar li { margin:18px 0; }
+    nav.sidebar .navbar a { color:#fff; text-decoration:none; display:block; padding:12px 0; font-size:18px; transition:background .18s; }
+    nav.sidebar .navbar a:hover { background:#333; }
+    nav.sidebar .navbar a.active { background:#04AA6D; font-weight:600; }
+    main.content { margin-left:220px; padding:48px 64px; width: calc(100% - 220px); max-width:1100px; }
+    .project { margin-bottom:18px; padding-bottom:12px; border-bottom:1px solid #eee; }
+    .project h2 { margin:0 0 8px; font-size:20px; }
+    .project p { margin:0; color:#333; line-height:1.5; }
+    footer.sitefoot { margin-top:40px; color:#444; font-size:14px; }
+    @media (max-width:720px) { nav.sidebar{ position:relative; width:100%; padding:12px 0; } nav.sidebar .navbar{ display:flex; justify-content:center; gap:12px; } main.content{ margin-left:0; padding:20px; } }
+  </style>
 </head>
 <body>
-    <nav>
-        <ul class="navbar">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html" class="active">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+  <div class="page">
+    <nav class="sidebar" aria-label="Main navigation">
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
 
-    <main>
-        <h1>My Projects</h1>
-        <p>Below are some of my recent works and practice projects:</p>
+    <main class="content">
+      <h1>Projects</h1>
 
-        <section class="project-list">
-            <article class="project">
-                <h2>1. Calculator App (Java)</h2>
-                <p>A simple calculator built using <strong>Java JFrame</strong> for GUI with support for basic arithmetic operations.</p>
-            </article>
+      <section class="project">
+        <h2>Retail Store Management System (C++)</h2>
+        <p>Console application using linked lists, file I/O, and basic stock management functions (add, update, remove, search).</p>
+      </section>
 
-            <article class="project">
-                <h2>2. Retail Store Management System (C++)</h2>
-                <p>A console-based project using <strong>Linked Lists and File I/O</strong> to manage products, stock, and sales data efficiently.</p>
-            </article>
+      <section class="project">
+        <h2>Calculator GUI (Java Swing)</h2>
+        <p>Graphical calculator built with JFrame supporting basic arithmetic and keyboard input handling.</p>
+      </section>
 
-            <article class="project">
-                <h2>3. Personal Portfolio Website (HTML, CSS)</h2>
-                <p>This website showcases my skills, projects, and contact information — fully responsive and cleanly designed.</p>
-            </article>
-        </section>
+      <section class="project">
+        <h2>Personal Website (HTML & CSS)</h2>
+        <p>This site — a clean multi-page HTML/CSS site deployed with GitHub Pages to present personal information and projects.</p>
+      </section>
+
+      <footer class="sitefoot">
+        <p>More projects will be added as I continue learning and building.</p>
+      </footer>
     </main>
+  </div>
 </body>
 </html>
