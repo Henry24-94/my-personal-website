@@ -1,37 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solomon's Personal Website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Home | Solomon</title>
+  <style>
+    /* Reset & basics */
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", Roboto, Arial, sans-serif; color:#111; background:#fff; }
+
+    /* Layout */
+    .page {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar */
+    nav.sidebar {
+      width: 220px;
+      background:#222;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center; /* centers the list vertically */
+      padding: 40px 0;
+      position: fixed;
+      top: 0; left: 0; bottom: 0;
+    }
+
+    nav.sidebar .navbar {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    nav.sidebar .navbar li { margin: 18px 0; }
+
+    nav.sidebar .navbar a {
+      color:#fff;
+      text-decoration:none;
+      display:block;
+      padding:12px 0;
+      font-size:18px;
+      transition: background .18s, color .18s;
+    }
+
+    nav.sidebar .navbar a:hover { background:#333; }
+    nav.sidebar .navbar a.active { background:#04AA6D; font-weight:600; color:#fff; }
+
+    /* Content area (to the right of the fixed sidebar) */
+    main.content {
+      margin-left: 220px; /* leave space for sidebar */
+      padding: 48px 64px;
+      width: calc(100% - 220px);
+      max-width: 1100px;
+    }
+
+    header h1 { font-size:36px; margin:6px 0 8px; letter-spacing: -0.5px; }
+    header p { margin:0 0 24px; color:#333; font-size:18px; }
+
+    /* Contact block styling */
+    .contact-card { display:flex; justify-content:space-between; gap:20px; align-items:flex-start; flex-wrap:wrap; }
+    .contact-list { list-style: disc; padding-left: 20px; margin:0; color:#111; }
+    .contact-list strong { color:#111; }
+
+    /* Footer */
+    footer.sitefoot {
+      margin-top: 48px;
+      color:#444;
+      font-size:14px;
+    }
+
+    /* Responsive - stack on small screens */
+    @media (max-width:720px) {
+      nav.sidebar { position:relative; width:100%; height:auto; padding:12px 0; display:block; }
+      nav.sidebar .navbar { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }
+      nav.sidebar .navbar li { margin: 0; }
+      main.content { margin-left:0; padding:20px; width:100%; }
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <ul class="navbar">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+  <div class="page">
+    <nav class="sidebar" aria-label="Main navigation">
+      <ul class="navbar">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
 
-    <header>
+    <main class="content">
+      <header>
         <h1>Welcome To My Personal Website</h1>
-        <p>Created By Solomon</p>
-    </header>
+        <p>Created by Solomon — a 2nd-year Software Engineering student.</p>
+      </header>
 
-    <section id="contact">
+      <section id="intro">
+        <h2>About this site</h2>
+        <p>This simple site showcases my background, projects and contact details. Use the navigation on the left to move between pages.</p>
+      </section>
+
+      <section id="contact" style="margin-top:32px;">
         <h2>Contact Information</h2>
-        <ul>
+        <div class="contact-card">
+          <ul class="contact-list">
             <li><strong>Email:</strong> solomonfentaw884@gmail.com</li>
             <li><strong>Phone:</strong> +251 914131094</li>
             <li><strong>Location:</strong> Ethiopia</li>
-        </ul>
-    </section>
+          </ul>
+          <div style="min-width:220px; text-align:right; color:#222;">
+            <p style="margin:0; font-weight:600;">© 2025 Solomon</p>
+            <p style="margin:6px 0 0; font-size:13px; color:#666;">All Rights Reserved</p>
+          </div>
+        </div>
+      </section>
 
-    <footer>
-        <p>&copy; 2025 Solomon | All Rights Reserved</p>
-    </footer>
+      <footer class="sitefoot">
+        <p>Designed with clarity and simplicity — maintain and update from your GitHub repository.</p>
+      </footer>
+    </main>
+  </div>
 </body>
 </html>
