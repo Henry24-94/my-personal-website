@@ -482,4 +482,27 @@ body {
     width: 100%;
     max-width: 250px;
   }
+
+}
+:root {
+  --bg-color: #f9fafc;
+  --text-color: #222;
+  --card-bg: #fff;
+  --sidebar-bg: #1e1e2f;
+  --accent-color: #5865f2;
+}
+
+/* 🌙 Dark theme */
+.dark-mode {
+  --bg-color: #0f1117;
+  --text-color: #e4e6eb;
+  --card-bg: #1e1e2f;
+  --sidebar-bg: #15161d;
+  --accent-color: #8b9cfb;
+}
+
+/* Apply theme variables globally */
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
 }
