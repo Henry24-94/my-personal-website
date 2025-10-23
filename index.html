@@ -1,206 +1,212 @@
-Solomon, [10/23/25 12:55 PM]
-<!DOCTYPE html>  
-<html lang="en">  
-<head>  
-  <meta charset="utf-8" />  
-  <meta name="viewport" content="width=device-width,initial-scale=1" />  
-  <title>Home | Solomon</title>  
- <style>
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: "Poppins", "Segoe UI", Roboto, Arial, sans-serif;
-    color: #111;
-    background: #f5f7fa;
-  }
-   @media (max-width: 768px) {
-  nav.sidebar {
-    flex-wrap: wrap;
-    height: auto;
-    padding: 10px 0;
-  }
-  .sidebar h2 {
-    width: 100%;
-    text-align: center;
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solomon | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="#home">Solomon</a>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#home" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#projects" class="nav-link">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a href="#blog" class="nav-link">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Contact</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
 
+  <!-- Home Section -->
+  <section id="home" class="section home-section">
+    <div class="container">
+      <div class="home-content">
+        <h1>Welcome To My Personal Website</h1>
+        <p>Created by Solomon — a 3rd-year Computer Science student.</p>
+        <div class="btn-group">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  /* Sidebar */
-  nav.sidebar {
-    width: 220px;
-    background: linear-gradient(180deg, #111 0%, #222 100%);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 0;
-    position: fixed;
-    top: 0; left: 0; bottom: 0;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
-  }
+  <!-- About Section -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Hello! I'm <strong>Solomon</strong>, a 3rd-year Computer Science student with a deep interest in coding, design, and technology. I enjoy building small but useful projects that help me learn real-world programming skills.</p>
+          <p>This website is part of my personal journey — it's a space to share what I'm learning, show my projects, and connect with others in tech.</p>
+        </div>
+        <div class="skills">
+          <h3>Skills & Tools</h3>
+          <ul>
+            <li><i class="fas fa-code"></i> C++ (Data structures, file handling, OOP)</li>
+            <li><i class="fab fa-java"></i> Java (OOP, GUI, collections)</li>
+            <li><i class="fab fa-html5"></i> HTML, CSS, basic JavaScript</li>
+            <li><i class="fab fa-git-alt"></i> GitHub and version control</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  nav.sidebar .navbar {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    text-align: center;
-  }
+  <!-- Projects Section -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <h2 class="section-title">My Projects</h2>
+      <p class="section-subtitle">These projects are under development and will be released soon 🚧</p>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-store"></i>
+          </div>
+          <h3>Retail Store Management System (C++)</h3>
+          <p>Console app using linked lists, file I/O, and stock management functions (add, update, remove, search).</p>
+          <div class="project-tags">
+            <span class="tag">C++</span>
+            <span class="tag">File I/O</span>
+            <span class="tag">Data Structures</span>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <h3>Calculator GUI (Java Swing)</h3>
+          <p>Graphical calculator built with JFrame supporting arithmetic operations and keyboard input handling.</p>
+          <div class="project-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Swing</span>
+            <span class="tag">GUI</span>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3>Personal Website (HTML & CSS)</h3>
+          <p>This site — a clean multi-page HTML/CSS site deployed with GitHub Pages to present personal information and projects.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Responsive Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  nav.sidebar .navbar li {
-    margin: 20px 0;
-  }
+  <!-- Blog Section -->
+  <section id="blog" class="section blog-section">
+    <div class="container">
+      <h2 class="section-title">Blog & Articles</h2>
+      <p class="coming-soon">These posts are under development and will be published soon 🚧</p>
+      <div class="blog-grid">
+        <article class="blog-post">
+          <h3>Getting Started with C++</h3>
+          <p>Step-by-step beginner-friendly guide to learning C++ basics, compiling, and running your first program.</p>
+          <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
+        </article>
+        
+        <article class="blog-post">
+          <h3>Building a Java GUI Calculator</h3>
+          <p>A practical guide to using Java Swing for creating a simple calculator application with keyboard support.</p>
+          <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
+        </article>
+        
+        <article class="blog-post">
+          <h3>Tips for Organizing Your Personal Website</h3>
+          <p>Learn how to structure your website, keep it clean, and create pages that are easy to maintain.</p>
+          <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-  nav.sidebar .navbar a {
-    color: #ccc;
-    text-decoration: none;
-    display: block;
-    padding: 12px 0;
-    font-size: 18px;
-    letter-spacing: 0.5px;
-    transition: all 0.25s ease;
-    border-left: 3px solid transparent;
-  }
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+      <p class="section-subtitle">Feel free to reach out through any of the options below.</p>
+      <div class="contact-content">
+        <div class="contact-info">
+          <ul class="contact-list">
+            <li>
+              <i class="fas fa-envelope"></i>
+              <div>
+                <strong>Email:</strong>
+                <a href="mailto:solomonfentaw884@gmail.com">solomonfentaw884@gmail.com</a>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <div>
+                <strong>Phone:</strong>
+                <a href="tel:+251914131094">+251 914131094</a>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-location-dot"></i>
+              <div>
+                <strong>Location:</strong>
+                <span>Ethiopia</span>
+              </div>
+            </li>
+            <li>
+              <i class="fab fa-linkedin"></i>
+              <div>
+                <strong>LinkedIn:</strong>
+                <a href="https://www.linkedin.com/in/solomon-fentaw" target="_blank">My LinkedIn</a>
+              </div>
+            </li>
+            <li>
+              <i class="fab fa-github"></i>
+              <div>
+                <strong>GitHub:</strong>
+                <a href="https://github.com/Henry24-94" target="_blank">My GitHub</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  nav.sidebar .navbar a:hover {
-    background: rgba(255, 255, 255, 0.05);
-    color: #04AA6D;
-    border-left: 3px solid #04AA6D;
-    transform: scale(1.05);
-  }
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Solomon — Built with clarity and simplicity.</p>
+      <p>All Rights Reserved</p>
+    </div>
+  </footer>
 
-  nav.sidebar .navbar a.active {
-    background: rgba(255, 255, 255, 0.08);
-    color: #fff;
-    font-weight: 600;
-    border-left: 3px solid #00ff99;
-  }
-
-  /* Content area */
-  main.content {
-    margin-left: 220px;
-    padding: 48px 64px;
-    width: calc(100% - 220px);
-    max-width: 1100px;
-    animation: fadeIn 0.8s ease;
-  }
-
-  header h1 {
-    font-size: 36px;
-    margin: 6px 0 8px;
-    letter-spacing: -0.5px;
-    color: #111;
-  }
-
-  header p {
-    margin: 0 0 24px;
-    color: #444;
-    font-size: 18px;
-  }
-
-  /* Contact block */
-  .contact-card {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .contact-list {
-    list-style: disc;
-    padding-left: 20px;
-    margin: 0;
-    color: #111;
-  }
-
-  footer.sitefoot {
-    margin-top: 48px;
-    color: #555;
-    font-size: 14px;
-  }
-
-  /* Simple fade animation */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* Responsive */
-  @media (max-width:720px) {
-    nav.sidebar {
-      position: relative;
-      width: 100%;
-      height: auto;
-      padding: 12px 0;
-      display: block;
-    }
-    nav.sidebar .navbar {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    nav.sidebar .navbar li { margin: 0; }
-    main.content {
-      margin-left: 0;
-      padding: 20px;
-      width: 100%;
-    }
-  }
-</style>
-</head>  
-<body>  
-  <div class="page">  
-    <nav class="sidebar" aria-label="Main navigation">  
-      <ul class="navbar">  
-        <li><a href="index.html" class="active">Home</a></li>  
-        <li><a href="about.html">About</a></li>  
-        <li><a href="projects.html">Projects</a></li>  
-        <li><a href="contact.html">Contact</a></li> 
-          <li><a href="blog.html">Blog</a></li>  
-      </ul>  
-    </nav>  
-  
-    <main class="content">  
-      <header>  
-        <h1>Welcome To My Personal Website</h1>  
-        <p>Created by Solomon — a 3rd-year Computer Science student.</p>  
-      </header>  
-  
-      <section id="intro">  
-        <h2>About this site</h2>  
-        <p>This simple site showcases my background, projects and contact details. Use the navigation on the left to move between pages.</p>  
-      </section>  
-  
-      <section id="contact" style="margin-top:32px;">  
-        <h2>Contact Information</h2>  
-        <div class="contact-card">  
-          <ul class="contact-list">  
-            <li><strong>Email:</strong> solomonfentaw884@gmail.com</li>  
-            <li><strong>Phone:</strong> +251 914131094</li>  
-            <li><strong>Location:</strong> Ethiopia</li>  
-          </ul>  
-          <div style="min-width:220px; text-align:right; color:#222;">
-
-Solomon, [10/23/25 12:55 PM]
-<p style="margin:0; font-weight:600;">© 2025 Solomon</p>  
-            <p style="margin:6px 0 0; font-size:13px; color:#666;">All Rights Reserved</p>  
-          </div>  
-        </div>  
-      </section>  
-  
-      <footer class="sitefoot">  
-        <p>Designed with clarity and simplicity — maintain and update from your GitHub repository.</p>  
-      </footer>  
-    </main>  
-  </div>  
-</body>  
+  <script src="script.js"></script>
+</body>
 </html>
-
-
