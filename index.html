@@ -1,155 +1,192 @@
+Solomon, [10/23/25 12:47 PM]
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Home | Solomon</title>
- <style>
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: "Poppins", "Segoe UI", Roboto, Arial, sans-serif;
-    color: #111;
-    background: #f5f7fa;
-  }
 
-  /* Sidebar */
-  nav.sidebar {
-    width: 220px;
-    background: linear-gradient(180deg, #111 0%, #222 100%);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 0;
-    position: fixed;
-    top: 0; left: 0; bottom: 0;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
-  }
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  nav.sidebar .navbar {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    text-align: center;
-  }
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Poppins", "Segoe UI", Roboto, Arial, sans-serif;
+      color: #111;
+      background: #f5f7fa;
+      overflow-x: hidden;
+    }
 
-  nav.sidebar .navbar li {
-    margin: 20px 0;
-  }
-
-  nav.sidebar .navbar a {
-    color: #ccc;
-    text-decoration: none;
-    display: block;
-    padding: 12px 0;
-    font-size: 18px;
-    letter-spacing: 0.5px;
-    transition: all 0.25s ease;
-    border-left: 3px solid transparent;
-  }
-
-  nav.sidebar .navbar a:hover {
-    background: rgba(255, 255, 255, 0.05);
-    color: #04AA6D;
-    border-left: 3px solid #04AA6D;
-    transform: scale(1.05);
-  }
-
-  nav.sidebar .navbar a.active {
-    background: rgba(255, 255, 255, 0.08);
-    color: #fff;
-    font-weight: 600;
-    border-left: 3px solid #00ff99;
-  }
-
-  /* Content area */
-  main.content {
-    margin-left: 220px;
-    padding: 48px 64px;
-    width: calc(100% - 220px);
-    max-width: 1100px;
-    animation: fadeIn 0.8s ease;
-  }
-
-  header h1 {
-    font-size: 36px;
-    margin: 6px 0 8px;
-    letter-spacing: -0.5px;
-    color: #111;
-  }
-
-  header p {
-    margin: 0 0 24px;
-    color: #444;
-    font-size: 18px;
-  }
-
-  /* Contact block */
-  .contact-card {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .contact-list {
-    list-style: disc;
-    padding-left: 20px;
-    margin: 0;
-    color: #111;
-  }
-
-  footer.sitefoot {
-    margin-top: 48px;
-    color: #555;
-    font-size: 14px;
-  }
-
-  /* Simple fade animation */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* Responsive */
-  @media (max-width:720px) {
+    /* Sidebar */
     nav.sidebar {
-      position: relative;
-      width: 100%;
-      height: auto;
-      padding: 12px 0;
-      display: block;
-    }
-    nav.sidebar .navbar {
+      width: 80px;
+      background: #111;
+      color: #fff;
       display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 0;
+      position: fixed;
+      top: 0; left: 0; bottom: 0;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+      transition: width 0.3s ease;
     }
-    nav.sidebar .navbar li { margin: 0; }
-    main.content {
-      margin-left: 0;
-      padding: 20px;
+
+    /* Expand on hover */
+    nav.sidebar:hover {
+      width: 220px;
+    }
+
+    nav.sidebar .navbar {
+      list-style: none;
+      padding: 0;
+      margin: 0;
       width: 100%;
     }
-  }
-</style>
+
+    nav.sidebar .navbar li {
+      margin: 18px 0;
+    }
+
+    nav.sidebar .navbar a {
+      color: #ccc;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 18px;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      transition: all 0.25s ease;
+      border-left: 3px solid transparent;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    nav.sidebar .navbar a i {
+      font-size: 18px;
+      min-width: 20px;
+      text-align: center;
+    }
+
+    nav.sidebar .navbar a:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: #04AA6D;
+      border-left: 3px solid #04AA6D;
+      transform: scale(1.05);
+    }
+
+    nav.sidebar .navbar a.active {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      font-weight: 600;
+      border-left: 3px solid #00ff99;
+    }
+
+    /* Content area */
+    main.content {
+      margin-left: 80px;
+      padding: 48px 64px;
+      transition: margin-left 0.3s ease;
+      animation: fadeIn 0.8s ease;
+    }
+
+    nav.sidebar:hover ~ main.content {
+      margin-left: 220px;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin: 6px 0 8px;
+      letter-spacing: -0.5px;
+      color: #111;
+    }
+
+    header p {
+      margin: 0 0 24px;
+      color: #444;
+      font-size: 18px;
+    }
+
+    /* Contact block */
+    .contact-card {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-list {
+      list-style: disc;
+      padding-left: 20px;
+      margin: 0;
+      color: #111;
+    }
+
+    footer.sitefoot {
+      margin-top: 48px;
+      color: #555;
+      font-size: 14px;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width:720px) {
+      nav.sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: center;
+        padding: 12px 0;
+      }
+
+      nav.sidebar:hover {
+        width: 100%;
+      }
+
+      nav.sidebar .navbar {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      nav.sidebar .navbar a {
+        justify-content: center;
+        border: none;
+      }
+
+      main.content {
+        margin-left: 0;
+        padding: 20px;
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="page">
     <nav class="sidebar" aria-label="Main navigation">
       <ul class="navbar">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+
+Solomon, [10/23/25 12:47 PM]
+<li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="about.html"><i class="fa-solid fa-user"></i> About</a></li>
+        <li><a href="projects.html"><i class="fa-solid fa-code"></i> Projects</a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
       </ul>
     </nav>
 
@@ -161,7 +198,7 @@
 
       <section id="intro">
         <h2>About this site</h2>
-        <p>This simple site showcases my background, projects and contact details. Use the navigation on the left to move between pages.</p>
+        <p>This simple site showcases my background, projects and contact details. Use the navigation sidebar to move between pages.</p>
       </section>
 
       <section id="contact" style="margin-top:32px;">
@@ -186,5 +223,3 @@
   </div>
 </body>
 </html>
-
-
