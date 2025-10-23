@@ -22,3 +22,23 @@ window.addEventListener('scroll', () => {
     navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
   }
 });
+const toggleBtn = document.getElementById("theme-toggle");
+const body = document.body;
+
+// Load saved theme from localStorage
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark-mode");
+  toggleBtn.innerHTML = '<i class="ri-sun-line"></i>';
+}
+
+toggleBtn.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+
+  if (body.classList.contains("dark-mode")) {
+    toggleBtn.innerHTML = '<i class="ri-sun-line"></i>';
+    localStorage.setItem("theme", "dark");
+  } else {
+    toggleBtn.innerHTML = '<i class="ri-moon-line"></i>';
+    localStorage.setItem("theme", "light");
+  }
+});
