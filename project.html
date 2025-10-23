@@ -2,60 +2,169 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects | Solomon</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
   <style>
-    /* Same CSS as above for consistent appearance */
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: "Segoe UI", Roboto, Arial, sans-serif; color:#111; background:#fff; }
-    .page { display:flex; min-height:100vh; }
-    nav.sidebar { width:220px; background:#222; color:#fff; display:flex; align-items:center; justify-content:center; padding:40px 0; position:fixed; top:0; left:0; bottom:0; }
-    nav.sidebar .navbar { list-style:none; padding:0; margin:0; width:100%; text-align:center; }
-    nav.sidebar .navbar li { margin:18px 0; }
-    nav.sidebar .navbar a { color:#fff; text-decoration:none; display:block; padding:12px 0; font-size:18px; transition:background .18s; }
-    nav.sidebar .navbar a:hover { background:#333; }
-    nav.sidebar .navbar a.active { background:#04AA6D; font-weight:600; }
-    main.content { margin-left:220px; padding:48px 64px; width: calc(100% - 220px); max-width:1100px; }
-    .project { margin-bottom:18px; padding-bottom:12px; border-bottom:1px solid #eee; }
-    .project h2 { margin:0 0 8px; font-size:20px; }
-    .project p { margin:0; color:#333; line-height:1.5; }
-    footer.sitefoot { margin-top:40px; color:#444; font-size:14px; }
-    @media (max-width:720px) { nav.sidebar{ position:relative; width:100%; padding:12px 0; } nav.sidebar .navbar{ display:flex; justify-content:center; gap:12px; } main.content{ margin-left:0; padding:20px; } }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Poppins", "Segoe UI", Roboto, Arial, sans-serif;
+      background: #f4f5f7;
+      color: #222;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar */
+    nav.sidebar {
+      width: 240px;
+      background: #111;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 40px;
+      position: fixed;
+      top: 0; left: 0; bottom: 0;
+      transition: width 0.3s;
+    }
+
+    nav.sidebar:hover {
+      width: 260px;
+    }
+
+    .sidebar h2 {
+      font-size: 22px;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+    }
+
+    .navbar {
+      list-style: none;
+      width: 100%;
+      padding: 0;
+    }
+
+    .navbar li {
+      margin: 10px 0;
+    }
+
+    .navbar a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #ccc;
+      padding: 12px 30px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .navbar a:hover {
+      background: #222;
+      color: #04AA6D;
+    }
+
+    .navbar a.active {
+      background: #04AA6D;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* Icons */
+    .navbar i {
+      font-size: 20px;
+    }
+
+    /* Content */
+    main.content {
+      margin-left: 240px;
+      padding: 50px 60px;
+      flex: 1;
+      transition: margin-left 0.3s;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #111;
+    }
+
+    .project {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .project h2 {
+      margin-bottom: 8px;
+      color: #222;
+    }
+
+    .project p {
+      color: #444;
+      line-height: 1.5;
+    }
+
+    footer.sitefoot {
+      margin-top: 40px;
+      color: #555;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      nav.sidebar {
+        width: 100%;
+        height: 70px;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+      }
+      .navbar {
+        display: flex;
+        gap: 18px;
+      }
+      main.content {
+        margin-left: 0;
+        padding: 25px;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="page">
-    <nav class="sidebar" aria-label="Main navigation">
-      <ul class="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <nav class="sidebar">
+    <h2>Solomon</h2>
+    <ul class="navbar">
+      <li><a href="index.html"><i class="ri-home-4-line"></i>Home</a></li>
+      <li><a href="about.html"><i class="ri-user-line"></i>About</a></li>
+      <li><a href="projects.html" class="active"><i class="ri-folder-line"></i>Projects</a></li>
+      <li><a href="contact.html"><i class="ri-mail-line"></i>Contact</a></li>
+    </ul>
+  </nav>
 
-    <main class="content">
-      <h1>Projects</h1>
+  <main class="content">
+    <h1>Projects</h1>
 
-      <section class="project">
-        <h2>Retail Store Management System (C++)</h2>
-        <p>Console application using linked lists, file I/O, and basic stock management functions (add, update, remove, search).</p>
-      </section>
+    <section class="project">
+      <h2>Retail Store Management System (C++)</h2>
+      <p>Console application using linked lists, file I/O, and basic stock management functions (add, update, remove, search).</p>
+    </section>
 
-      <section class="project">
-        <h2>Calculator GUI (Java Swing)</h2>
-        <p>Graphical calculator built with JFrame supporting basic arithmetic and keyboard input handling.</p>
-      </section>
+    <section class="project">
+      <h2>Calculator GUI (Java Swing)</h2>
+      <p>Graphical calculator built with JFrame supporting basic arithmetic and keyboard input handling.</p>
+    </section>
 
-      <section class="project">
-        <h2>Personal Website (HTML & CSS)</h2>
-        <p>This site — a clean multi-page HTML/CSS site deployed with GitHub Pages to present personal information and projects.</p>
-      </section>
+    <section class="project">
+      <h2>Personal Website (HTML & CSS)</h2>
+      <p>This site — a clean multi-page HTML/CSS site deployed with GitHub Pages to present personal information and projects.</p>
+    </section>
 
-      <footer class="sitefoot">
-        <p>More projects will be added as I continue learning and building.</p>
-      </footer>
-    </main>
-  </div>
+    <footer class="sitefoot">
+      <p>More projects will be added as I continue learning and building.</p>
+    </footer>
+  </main>
 </body>
 </html>
