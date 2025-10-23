@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Solomon</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      color: #111;
+      background: #f9f9f9;
+    }
+
+    /* Sidebar */
+    nav.sidebar {
+      width: 220px;
+      background: #111;
+      color: #fff;
+      position: fixed;
+      top: 0; left: 0; bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav.sidebar ul {
+      list-style: none;
+      width: 100%;
+      text-align: center;
+    }
+
+    nav.sidebar li {
+      margin: 16px 0;
+    }
+
+    nav.sidebar a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      padding: 12px 0;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    nav.sidebar a:hover,
+    nav.sidebar a.active {
+      background: #04AA6D;
+    }
+
+    main {
+      margin-left: 220px;
+      padding: 40px 30px;
+      max-width: 1000px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .blog-post {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .blog-post h2 {
+      font-size: 20px;
+      color: #04AA6D;
+      margin-bottom: 8px;
+    }
+
+    .blog-post p {
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .coming-soon {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 16px;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      nav.sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+      }
+
+      nav.sidebar ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      nav.sidebar li {
+        margin: 8px 12px;
+      }
+
+      main {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="sidebar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Blog & Articles</h1>
+    <p class="coming-soon">These posts are under development and will be published soon 🚧</p>
+
+    <section class="blog-post">
+      <h2>Getting Started with C++</h2>
+      <p>Step-by-step beginner-friendly guide to learning C++ basics, compiling, and running your first program.</p>
+    </section>
+
+    <section class="blog-post">
+      <h2>Building a Java GUI Calculator</h2>
+      <p>A practical guide to using Java Swing for creating a simple calculator application with keyboard support.</p>
+    </section>
+
+    <section class="blog-post">
+      <h2>Tips for Organizing Your Personal Website</h2>
+      <p>Learn how to structure your website, keep it clean, and create pages that are easy to maintain.</p>
+    </section>
+
+    <footer>
+      <p>More articles will be added as I continue learning and sharing knowledge.</p>
+    </footer>
+  </main>
+</body>
+</html>
