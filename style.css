@@ -506,3 +506,23 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
 }
+/* Theme Toggle Button */
+#theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  transition: var(--transition);
+  margin-left: 1rem;
+}
+
+#theme-toggle:hover {
+  color: var(--accent-color);
+}
+
+#theme-toggle i {
+  pointer-events: none; /* so icon doesn't interfere with click */
+}
+
+
