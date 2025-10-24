@@ -3,7 +3,6 @@ const themeToggle = document.getElementById('theme-toggle');
 themeToggle.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
 
-  // Toggle icon between moon and sun
   const icon = themeToggle.querySelector('i');
   if (document.body.classList.contains('dark-mode')) {
     icon.classList.replace('ri-moon-line', 'ri-sun-line');
