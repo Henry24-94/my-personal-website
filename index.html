@@ -1,137 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solomon | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-  <!-- Navbar -->
+  <!-- Navigation -->
   <nav class="navbar">
-    <div class="nav-container container">
+    <div class="nav-container">
       <div class="nav-logo">
-        <a href="#">Daniel</a>
+        <a href="#home">Solomon</a>
       </div>
       <ul class="nav-menu">
-        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item">
+          <a href="#home" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#projects" class="nav-link">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a href="#blog" class="nav-link">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Contact</a>
+        </li>
       </ul>
-      <button id="theme-toggle"><i class="ri-moon-line"></i></button>
       <div class="hamburger">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </div>
+      <button id="theme-toggle"><i class="fas fa-moon"></i></button>
     </div>
   </nav>
 
-  <!-- Home Section -->
-  <section id="home" class="home-section section">
-    <div class="home-content container">
-      <h1>Hello, I’m Daniel</h1>
-      <p>Welcome to my portfolio website. I’m a passionate developer.</p>
-      <div class="btn-group">
-        <a href="#projects" class="btn btn-primary">My Work</a>
-        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+  <!-- Home Section with Particles -->
+  <section id="home" class="section home-section">
+    <div class="particles">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="container">
+      <div class="home-content">
+        <h1>Welcome To My Personal Website</h1>
+        <p>Created by Solomon — a 3rd-year Computer Science student.</p>
+        <div class="btn-group">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="about-section section">
-    <div class="about-content container">
-      <div class="about-text">
-        <h2 class="section-title">About Me</h2>
-        <p>I am a software engineering student passionate about web development, design, and coding.</p>
-        <p>I learn fast and always try to implement best practices in my projects.</p>
-      </div>
-      <div class="skills">
-        <h3>Skills</h3>
-        <ul>
-          <li><i class="ri-code-s-slash-line"></i>HTML & CSS</li>
-          <li><i class="ri-code-box-line"></i>JavaScript</li>
-          <li><i class="ri-function-line"></i>Java & Backend</li>
-          <li><i class="ri-reactjs-line"></i>React</li>
-        </ul>
+  <section id="about" class="section about-section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Hello! I'm <strong>Solomon</strong>, a 3rd-year Computer Science student with a deep interest in coding, design, and technology. I enjoy building small but useful projects that help me learn real-world programming skills.</p>
+          <p>This website is part of my personal journey — it's a space to share what I'm learning, show my projects, and connect with others in tech.</p>
+        </div>
+        <div class="skills">
+          <h3>Skills & Tools</h3>
+          <ul>
+            <li><i class="fas fa-code"></i> C++ (Data structures, file handling, OOP)</li>
+            <li><i class="fab fa-java"></i> Java (OOP, GUI, collections)</li>
+            <li><i class="fab fa-html5"></i> HTML, CSS, basic JavaScript</li>
+            <li><i class="fab fa-git-alt"></i> GitHub and version control</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="section">
-    <h2 class="section-title">Projects</h2>
-    <div class="projects-grid container">
-      <div class="project-card">
-        <i class="ri-code-box-line project-icon"></i>
-        <h3>Project 1</h3>
-        <p>My first web development project.</p>
-        <div class="project-tags">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JS</span>
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <h2 class="section-title">My Projects</h2>
+      <p class="section-subtitle">These projects are under development and will be released soon 🚧</p>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-store"></i>
+          </div>
+          <h3>Retail Store Management System (C++)</h3>
+          <p>Console app using linked lists, file I/O, and stock management functions (add, update, remove, search).</p>
+          <div class="project-tags">
+            <span class="tag">C++</span>
+            <span class="tag">File I/O</span>
+            <span class="tag">Data Structures</span>
+          </div>
         </div>
-      </div>
-      <div class="project-card">
-        <i class="ri-reactjs-line project-icon"></i>
-        <h3>Project 2</h3>
-        <p>A React-based interactive web app.</p>
-        <div class="project-tags">
-          <span class="tag">React</span>
-          <span class="tag">JS</span>
+        
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <h3>Calculator GUI (Java Swing)</h3>
+          <p>Graphical calculator built with JFrame supporting arithmetic operations and keyboard input handling.</p>
+          <div class="project-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Swing</span>
+            <span class="tag">GUI</span>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3>Personal Website (HTML & CSS)</h3>
+          <p>This site — a clean multi-page HTML/CSS site deployed with GitHub Pages to present personal information and projects.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Responsive Design</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Blog Section -->
-  <section id="blog" class="section">
-    <h2 class="section-title">Blog</h2>
-    <div class="blog-grid container">
-      <div class="blog-post">
-        <h3>Post 1</h3>
-        <p>This is a short description about my first blog post.</p>
-        <span class="read-more">Read more <i class="ri-arrow-right-line"></i></span>
-      </div>
-      <div class="blog-post">
-        <h3>Post 2</h3>
-        <p>This is a short description about my second blog post.</p>
-        <span class="read-more">Read more <i class="ri-arrow-right-line"></i></span>
+  <section id="blog" class="section blog-section">
+    <div class="container">
+      <h2 class="section-title">Blog & Articles</h2>
+      <p class="coming-soon">These posts are under development and will be published soon 🚧</p>
+      <div class="blog-grid">
+        <article class="blog-post">
+          <h3>Getting Started with C++</h3>
+          <p>Step-by-step beginner-friendly guide to learning C++ basics, compiling, and running your first program.</p>
+          <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
+        </article>
+        
+        <article class="blog-post">
+          <h3>Building a Java GUI Calculator</h3>
+          <p>A practical guide to using Java Swing for creating a simple calculator application with keyboard support.</p>
+          <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
+        </article>
+        
+        <article class="blog-post">
+          <h3>Tips for Organizing Your Personal Website</h3>
+          <p>Learn how to structure your website, keep it clean, and create pages that are easy to maintain.</p>
+          <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="contact-section section">
-    <h2 class="section-title">Contact</h2>
-    <div class="contact-content container">
-      <ul class="contact-list">
-        <li>
-          <i class="ri-mail-line"></i>
-          <div>
-            <strong>Email</strong>
-            <a href="mailto:daniel@example.com">daniel@example.com</a>
-          </div>
-        </li>
-        <li>
-          <i class="ri-phone-line"></i>
-          <div>
-            <strong>Phone</strong>
-            <a href="tel:+251900000000">+251 900 000 000</a>
-          </div>
-        </li>
-      </ul>
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+      <p class="section-subtitle">Feel free to reach out through any of the options below.</p>
+      <div class="contact-content">
+        <div class="contact-info">
+          <ul class="contact-list">
+            <li>
+              <i class="fas fa-envelope"></i>
+              <div>
+                <strong>Email:</strong>
+                <a href="mailto:solomonfentaw884@gmail.com">solomonfentaw884@gmail.com</a>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <div>
+                <strong>Phone:</strong>
+                <a href="tel:+251914131094">+251 914131094</a>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-location-dot"></i>
+              <div>
+                <strong>Location:</strong>
+                <span>Ethiopia</span>
+              </div>
+            </li>
+            <li>
+              <i class="fab fa-linkedin"></i>
+              <div>
+                <strong>LinkedIn:</strong>
+                <a href="https://www.linkedin.com/in/solomon-fentaw" target="_blank">My LinkedIn</a>
+              </div>
+            </li>
+            <li>
+              <i class="fab fa-github"></i>
+              <div>
+                <strong>GitHub:</strong>
+                <a href="https://github.com/Henry24-94" target="_blank">My GitHub</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 Daniel. All rights reserved.</p>
+    <div class="container">
+      <p>© 2025 Solomon — Built with clarity and simplicity.</p>
+      <p>All Rights Reserved</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
