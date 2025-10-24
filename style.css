@@ -502,11 +502,8 @@ body {
 }
 
 /* Apply theme variables globally */
-body {
-  background: var(--bg-color);
-  color: var(--text-color);
-}
-/* Theme Toggle Button */
+
+/* Theme Toggle Button Styling */
 #theme-toggle {
   background: transparent;
   border: none;
@@ -514,15 +511,36 @@ body {
   font-size: 1.5rem;
   color: var(--text-color);
   transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add spacing from other navbar items */
+.nav-container > #theme-toggle {
   margin-left: 1rem;
 }
 
+/* Hover effect */
 #theme-toggle:hover {
   color: var(--accent-color);
 }
 
+/* Ensure icon doesn't block click */
 #theme-toggle i {
-  pointer-events: none; /* so icon doesn't interfere with click */
+  pointer-events: none;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+  /* Position toggle next to hamburger */
+  #theme-toggle {
+    position: absolute;
+    right: 60px; /* adjust distance from right edge */
+    top: 20px;
+    z-index: 1100;
+    font-size: 1.4rem;
+  }
 }
 
 
