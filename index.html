@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,36 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Solomon | Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
   <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-container">
       <div class="nav-logo">
         <a href="#home">Solomon</a>
       </div>
-
       <ul class="nav-menu">
-        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-        <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
-        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="nav-item">
+          <a href="#home" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#projects" class="nav-link">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a href="#blog" class="nav-link">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Contact</a>
+        </li>
       </ul>
-
-      <!-- Hamburger for mobile -->
       <div class="hamburger">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </div>
-
-      <!-- Dark Mode Toggle -->
-      <button id="theme-toggle" aria-label="Toggle theme">
-        <i class="ri-moon-line"></i>
-      </button>
     </div>
   </nav>
 
@@ -81,7 +83,9 @@
       <p class="section-subtitle">These projects are under development and will be released soon 🚧</p>
       <div class="projects-grid">
         <div class="project-card">
-          <div class="project-icon"><i class="fas fa-store"></i></div>
+          <div class="project-icon">
+            <i class="fas fa-store"></i>
+          </div>
           <h3>Retail Store Management System (C++)</h3>
           <p>Console app using linked lists, file I/O, and stock management functions (add, update, remove, search).</p>
           <div class="project-tags">
@@ -90,8 +94,11 @@
             <span class="tag">Data Structures</span>
           </div>
         </div>
+        
         <div class="project-card">
-          <div class="project-icon"><i class="fas fa-calculator"></i></div>
+          <div class="project-icon">
+            <i class="fas fa-calculator"></i>
+          </div>
           <h3>Calculator GUI (Java Swing)</h3>
           <p>Graphical calculator built with JFrame supporting arithmetic operations and keyboard input handling.</p>
           <div class="project-tags">
@@ -100,8 +107,11 @@
             <span class="tag">GUI</span>
           </div>
         </div>
+        
         <div class="project-card">
-          <div class="project-icon"><i class="fas fa-globe"></i></div>
+          <div class="project-icon">
+            <i class="fas fa-globe"></i>
+          </div>
           <h3>Personal Website (HTML & CSS)</h3>
           <p>This site — a clean multi-page HTML/CSS site deployed with GitHub Pages to present personal information and projects.</p>
           <div class="project-tags">
@@ -119,6 +129,25 @@
     <div class="container">
       <h2 class="section-title">Blog & Articles</h2>
       <p class="coming-soon">These posts are under development and will be published soon 🚧</p>
+      <div class="blog-grid">
+        <article class="blog-post">
+          <h3>Getting Started with C++</h3>
+          <p>Step-by-step beginner-friendly guide to learning C++ basics, compiling, and running your first program.</p>
+          <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
+        </article>
+        
+        <article class="blog-post">
+          <h3>Building a Java GUI Calculator</h3>
+          <p>A practical guide to using Java Swing for creating a simple calculator application with keyboard support.</p>
+          <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
+        </article>
+        
+        <article class="blog-post">
+          <h3>Tips for Organizing Your Personal Website</h3>
+          <p>Learn how to structure your website, keep it clean, and create pages that are easy to maintain.</p>
+          <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -126,14 +155,47 @@
   <section id="contact" class="section contact-section">
     <div class="container">
       <h2 class="section-title">Contact Me</h2>
+      <p class="section-subtitle">Feel free to reach out through any of the options below.</p>
       <div class="contact-content">
-        <ul class="contact-list">
-          <li><i class="fas fa-envelope"></i> <div><strong>Email:</strong> <a href="mailto:solomonfentaw884@gmail.com">solomonfentaw884@gmail.com</a></div></li>
-          <li><i class="fas fa-phone"></i> <div><strong>Phone:</strong> <a href="tel:+251914131094">+251 914131094</a></div></li>
-          <li><i class="fas fa-location-dot"></i> <div><strong>Location:</strong> Ethiopia</div></li>
-          <li><i class="fab fa-linkedin"></i> <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/solomon-fentaw" target="_blank">My LinkedIn</a></div></li>
-          <li><i class="fab fa-github"></i> <div><strong>GitHub:</strong> <a href="https://github.com/Henry24-94" target="_blank">My GitHub</a></div></li>
-        </ul>
+        <div class="contact-info">
+          <ul class="contact-list">
+            <li>
+              <i class="fas fa-envelope"></i>
+              <div>
+                <strong>Email:</strong>
+                <a href="mailto:solomonfentaw884@gmail.com">solomonfentaw884@gmail.com</a>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <div>
+                <strong>Phone:</strong>
+                <a href="tel:+251914131094">+251 914131094</a>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-location-dot"></i>
+              <div>
+                <strong>Location:</strong>
+                <span>Ethiopia</span>
+              </div>
+            </li>
+            <li>
+              <i class="fab fa-linkedin"></i>
+              <div>
+                <strong>LinkedIn:</strong>
+                <a href="https://www.linkedin.com/in/solomon-fentaw" target="_blank">My LinkedIn</a>
+              </div>
+            </li>
+            <li>
+              <i class="fab fa-github"></i>
+              <div>
+                <strong>GitHub:</strong>
+                <a href="https://github.com/Henry24-94" target="_blank">My GitHub</a>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -146,7 +208,6 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
