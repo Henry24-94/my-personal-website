@@ -5,6 +5,10 @@ const navMenu = document.querySelector('.nav-menu');
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
   navMenu.classList.toggle('active');
+  <button id="theme-toggle" aria-label="Toggle theme">
+  <i class="ri-moon-line"></i>
+</button>
+
 });
 
 // Close mobile menu when clicking on a link
