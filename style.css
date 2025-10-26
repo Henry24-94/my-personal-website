@@ -218,8 +218,39 @@ body {
 }
 
 /* ==================== CONTACT SECTION ==================== */
+.contact-section {
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.contact-section .section-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.contact-section .section-subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 .contact-list {
   list-style: none;
+  text-align: left;
 }
 
 .contact-list li {
@@ -234,6 +265,23 @@ body {
   margin-right: 12px;
   color: #00bcd4;
 }
+
+/* Center on mobile as well */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-list {
+    text-align: center;
+  }
+
+  .contact-list li {
+    justify-content: center;
+  }
+}
+
 
 /* ==================== FOOTER ==================== */
 .footer {
@@ -286,5 +334,6 @@ body {
 .hamburger.active .bar:nth-child(3) {
   transform: rotate(-45deg) translateY(-8px);
 }
+
 
 
