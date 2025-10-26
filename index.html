@@ -3,141 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
-
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #000000;
-    }
-
-    [data-theme="dark"] {
-      --bg-color: #121212;
-      --text-color: #ffffff;
-    }
-
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      transition: background-color 0.4s ease, color 0.4s ease;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* --- Toggle Container --- */
-    .theme-switch-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 15px;
-      position: fixed;
-      top: 15px;
-      right: 15px;
-      z-index: 9999;
-      background: rgba(255, 255, 255, 0.3);
-      backdrop-filter: blur(8px);
-      border-radius: 30px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    /* --- Toggle Switch --- */
-    .theme-switch {
-      position: relative;
-      display: inline-block;
-      width: 55px;
-      height: 28px;
-    }
-
-    .theme-switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-
-    /* --- Slider Design --- */
-    .slider {
-      position: absolute;
-      cursor: pointer;
-      inset: 0;
-      background-color: #ccc;
-      transition: 0.4s;
-      border-radius: 34px;
-    }
-
-    .slider:before {
-      content: "";
-      position: absolute;
-      height: 22px;
-      width: 22px;
-      left: 3px;
-      bottom: 3px;
-      background-color: white;
-      transition: 0.4s;
-      border-radius: 50%;
-    }
-
-    input:checked + .slider {
-      background-color: #2196F3;
-    }
-
-    input:checked + .slider:before {
-      transform: translateX(26px);
-    }
-
-    /* --- Label Text --- */
-    #mode-text {
-      font-weight: 600;
-      font-size: 14px;
-    }
-
-    /* --- Mobile Responsive --- */
-    @media (max-width: 600px) {
-      .theme-switch-wrapper {
-        top: 10px;
-        right: 10px;
-        padding: 10px;
-        gap: 6px;
-      }
-
-      .theme-switch {
-        width: 45px;
-        height: 24px;
-      }
-
-      .slider:before {
-        height: 18px;
-        width: 18px;
-      }
-
-      #mode-text {
-        font-size: 13px;
-      }
-    }
-
-    /* --- Example Page Content --- */
-    main {
-      text-align: center;
-      padding: 100px 20px;
-    }
-
-    h1 {
-      font-size: 2.2em;
-      margin-bottom: 15px;
-    }
-
-    p {
-      font-size: 1.1em;
-      max-width: 600px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-  </style>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- 🌙 Dark/Bright Mode Switch -->
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar">
+    <div class="nav-container container">
+      <div class="nav-logo">
+        <a href="#">Solomon</a>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#home">Home</a></li>
+        <li class="nav-item"><a href="#about">About</a></li>
+        <li class="nav-item"><a href="#projects">Projects</a></li>
+        <li class="nav-item"><a href="#blog">Blog</a></li>
+        <li class="nav-item"><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== DARK/BRIGHT MODE TOGGLE ==================== -->
   <div class="theme-switch-wrapper">
     <label class="theme-switch" for="theme-checkbox">
       <input type="checkbox" id="theme-checkbox">
@@ -146,14 +38,117 @@
     <span id="mode-text">Dark Mode</span>
   </div>
 
-  <!-- 🧭 Example Page Content -->
-  <main>
-    <h1>Welcome to My Website</h1>
-    <p>This website has a modern dark/bright mode toggle that works smoothly on all devices.</p>
-  </main>
+  <!-- ==================== HOME SECTION ==================== -->
+  <section id="home" class="home-section">
+    <div class="container">
+      <h1>Hello, I'm Solomon</h1>
+      <p>I'm a 3rd-year Computer Science student passionate about coding and web development.</p>
+      <div class="btn-group">
+        <a href="#projects" class="btn-primary">See Projects</a>
+        <a href="#contact" class="btn-secondary">Contact Me</a>
+      </div>
+    </div>
+  </section>
 
-  <!-- ⚙️ JavaScript -->
+  <!-- ==================== ABOUT SECTION ==================== -->
+  <section id="about" class="about-section section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>I am a software engineering student with experience in Java, C++, and web technologies. I enjoy creating responsive and modern websites.</p>
+        </div>
+        <div class="skills">
+          <h3>Skills</h3>
+          <ul>
+            <li>Java / C++ Programming</li>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Data Structures & Algorithms</li>
+            <li>Web Development (Responsive Design)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROJECTS SECTION ==================== -->
+  <section id="projects" class="projects-section section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Retail Store Management</h3>
+          <p>Console-based system using C++ with linked list, file I/O, and search functionalities.</p>
+          <div class="project-tags">
+            <span class="tag">C++</span>
+            <span class="tag">Data Structures</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3>Calculator GUI</h3>
+          <p>Java JFrame project implementing basic arithmetic operations with GUI interface.</p>
+          <div class="project-tags">
+            <span class="tag">Java</span>
+            <span class="tag">GUI</span>
+          </div>
+        </div>
+        <!-- Add more project cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BLOG SECTION ==================== -->
+  <section id="blog" class="blog-section section">
+    <div class="container">
+      <h2 class="section-title">Blog</h2>
+      <div class="blog-grid">
+        <div class="blog-post">
+          <h3>Learning Data Structures</h3>
+          <p>Tips and resources for mastering DSA effectively as a university student.</p>
+        </div>
+        <div class="blog-post">
+          <h3>Java GUI Projects</h3>
+          <p>How to create interactive applications using Java Swing and JFrame.</p>
+        </div>
+        <!-- Add more blog posts as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT SECTION ==================== -->
+  <section id="contact" class="contact-section section">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+      <p class="section-subtitle">I’d love to hear from you!</p>
+      <div class="contact-content">
+        <div class="contact-info">
+          <ul class="contact-list">
+            <li><i class="fas fa-envelope"></i> solomon@example.com</li>
+            <li><i class="fas fa-phone"></i> +251 9xx xxx xxx</li>
+            <li><i class="fas fa-map-marker-alt"></i> Alamata, Ethiopia</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <p>&copy; 2025 Solomon. All rights reserved.</p>
+  </footer>
+
+  <!-- ==================== SCRIPTS ==================== -->
   <script>
+    // Hamburger toggle
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    });
+
+    // Dark/Bright mode toggle
     const toggleSwitch = document.getElementById('theme-checkbox');
     const modeText = document.getElementById('mode-text');
     const currentTheme = localStorage.getItem('theme') || 'light';
@@ -176,6 +171,9 @@
       }
     });
   </script>
+
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 </body>
 </html>
