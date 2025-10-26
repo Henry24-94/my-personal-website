@@ -112,3 +112,19 @@
     display: flex;
   }
 }
+/* Toggle only — no color or layout changes */
+.nav-menu {
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+}
+
