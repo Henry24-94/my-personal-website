@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
+    <nav class="navbar">
     <div class="nav-container">
       <div class="nav-logo">
         <a href="#home">Solomon</a>
@@ -41,8 +38,14 @@
     </div>
   </nav>
 
-  <!-- Home Section -->
-  <section id="home" class="section home-section">
+  <div class="theme-switch-wrapper">
+      <span id="mode-text">Dark Mode</span>
+      <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider"></div>
+      </label>
+  </div>
+      <section id="home" class="section home-section">
     <div class="container">
       <div class="home-content">
         <h1>Welcome To My Personal Website</h1>
@@ -52,11 +55,12 @@
           <a href="#contact" class="btn btn-secondary">Get In Touch</a>
         </div>
       </div>
+      <div class="image-box">
+              </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="section about-section">
+    <section id="about" class="section about-section">
     <div class="container">
       <h2 class="section-title">About Me</h2>
       <div class="about-content">
@@ -77,8 +81,7 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section projects-section">
+    <section id="projects" class="section projects-section">
     <div class="container">
       <h2 class="section-title">My Projects</h2>
       <p class="section-subtitle">These projects are under development and will be released soon 🚧</p>
@@ -125,8 +128,7 @@
     </div>
   </section>
 
-  <!-- Blog Section -->
-  <section id="blog" class="section blog-section">
+    <section id="blog" class="section blog-section">
     <div class="container">
       <h2 class="section-title">Blog & Articles</h2>
       <p class="coming-soon">These posts are under development and will be published soon 🚧</p>
@@ -152,8 +154,7 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section contact-section">
+    <section id="contact" class="section contact-section">
     <div class="container">
       <h2 class="section-title">Contact Me</h2>
       <p class="section-subtitle">Feel free to reach out through any of the options below.</p>
@@ -201,8 +202,7 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
+    <footer class="footer">
     <div class="container">
       <p>© 2025 Solomon — Built with clarity and simplicity.</p>
       <p>All Rights Reserved</p>
