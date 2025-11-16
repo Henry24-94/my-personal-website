@@ -1,4 +1,3 @@
-// Ensure the script runs only after the entire page is loaded
 document.addEventListener('DOMContentLoaded', () => {
 
     // ===================================
@@ -17,10 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // ===================================
     // 2. Dark/Light mode toggle functionality
     // ===================================
-    const toggleSwitch = document.getElementById('checkbox'); // Changed from 'theme-checkbox' to 'checkbox' to match the HTML ID I provided previously
+    // Using 'checkbox' ID from the HTML structure provided
+    const toggleSwitch = document.getElementById('checkbox'); 
     const modeText = document.getElementById('mode-text');
-    const currentTheme = localStorage.getItem('theme') || 'light';
     const htmlElement = document.documentElement;
+
+    // Use 'theme' key from localStorage
+    const currentTheme = localStorage.getItem('theme') || 'light'; 
 
     if (toggleSwitch && modeText) {
         // Apply saved theme on load
@@ -28,10 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (currentTheme === 'dark') {
             toggleSwitch.checked = true;
-            // If the current mode is dark, the text should offer to switch to Light Mode.
+            // Text should suggest the action: switch to Light Mode.
             modeText.textContent = 'Light Mode';
         } else {
-            // If the current mode is light, the text should offer to switch to Dark Mode.
+            // Text should suggest the action: switch to Dark Mode.
             modeText.textContent = 'Dark Mode';
         }
 
@@ -40,11 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (this.checked) {
                 htmlElement.setAttribute('data-theme', 'dark');
                 localStorage.setItem('theme', 'dark');
-                modeText.textContent = 'Light Mode'; // Now suggesting the other mode
+                modeText.textContent = 'Light Mode'; 
             } else {
                 htmlElement.setAttribute('data-theme', 'light');
                 localStorage.setItem('theme', 'light');
-                modeText.textContent = 'Dark Mode'; // Now suggesting the other mode
+                modeText.textContent = 'Dark Mode'; 
             }
         });
     }
