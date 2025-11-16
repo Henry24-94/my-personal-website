@@ -24,8 +24,8 @@
   --primary-color: #2196F3;
   --secondary-color: #1e1e1e;
   --section-bg: #1e1e1e;
-  --nav-bg: #212121; /* Slightly lighter for contrast against background */
-  --footer-bg: #212121;
+  --nav-bg: #111;
+  --footer-bg: #111;
   --gradient-home: linear-gradient(to right, #006064, #004d4d);
 }
 
@@ -374,9 +374,10 @@ body {
   transition: background 0.4s ease;
 }
 
-/* Dark mode adjustment for the wrapper background */
+/* ADDITION: Ensure the toggle wrapper background changes in dark mode */
 [data-theme="dark"] .theme-switch-wrapper {
     background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
 }
 
 .theme-switch {
