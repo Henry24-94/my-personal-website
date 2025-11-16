@@ -1,447 +1,74 @@
-/* ==================== GENERAL STYLES ==================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ============================= */
+/* DARK MODE STYLES ADDITION     */
+/* ============================= */
+
+/* 1. Main Color Overrides */
+body.dark-mode {
+    background-color: #1a1a1a; /* Dark background */
+    color: #f1f1f1; /* Light text */
 }
 
-:root {
-  /* Light Mode Variables */
-  --bg-color: #f8f9fa;
-  --text-color: #333;
-  --primary-color: #00bcd4;
-  --secondary-color: #fff;
-  --section-bg: #fff;
-  --nav-bg: #111;
-  --footer-bg: #111;
-  --gradient-home: linear-gradient(to right, #00bcd4, #006064);
+/* 2. Navbar Overrides */
+body.dark-mode .navbar {
+    background-color: #2c2c2c;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-[data-theme="dark"] {
-  /* Dark Mode Variables */
-  --bg-color: #121212;
-  --text-color: #ffffff;
-  --primary-color: #2196F3;
-  --secondary-color: #1e1e1e;
-  --section-bg: #1e1e1e;
-  --nav-bg: #111;
-  --footer-bg: #111;
-  --gradient-home: linear-gradient(to right, #006064, #004d4d);
+body.dark-mode .nav-link,
+body.dark-mode .nav-logo a {
+    color: #e0e0e0;
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--bg-color);
-  transition: background-color 0.4s ease, color 0.4s ease;
+/* 3. Section Overrides */
+body.dark-mode .section {
+    background-color: #1a1a1a;
+}
+body.dark-mode .section-title {
+    color: #bb86fc; /* Highlight color for titles */
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
+/* 4. Card and Button Overrides */
+body.dark-mode .project-card,
+body.dark-mode .blog-post {
+    background-color: #2c2c2c;
+    border: 1px solid #3d3d3d;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.section {
-  padding: 80px 0;
-  background-color: var(--bg-color);
-  transition: background-color 0.4s ease;
+body.dark-mode .btn-primary {
+    background-color: #bb86fc;
+    color: #1a1a1a;
+}
+body.dark-mode .btn-secondary {
+    background-color: transparent;
+    border: 1px solid #bb86fc;
+    color: #bb86fc;
+}
+body.dark-mode a {
+    color: #87cefa; /* Light blue links */
+}
+body.dark-mode a:hover {
+    color: #f1f1f1;
 }
 
-/* ==================== NAVIGATION ==================== */
-.navbar {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  background-color: var(--nav-bg);
-  color: var(--text-color);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  transition: background-color 0.4s ease;
+/* 5. Dark Mode Toggle Button Styling */
+#dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #333; /* Default light mode color */
+    margin-left: 15px;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+body.dark-mode #dark-mode-toggle {
+    color: #f1f1f1; /* Dark mode color */
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-}
-
-.nav-logo a {
-  font-size: 24px;
-  font-weight: bold;
-  text-decoration: none;
-  color: var(--primary-color);
-}
-
-.nav-menu {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-}
-
-.nav-item a {
-  color: var(--secondary-color);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-item a:hover {
-  color: var(--primary-color);
-}
-
-/* Hamburger */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.bar {
-  height: 3px;
-  width: 25px;
-  background-color: var(--secondary-color);
-  border-radius: 3px;
-  transition: all 0.3s ease;
-}
-
-/* ==================== HOME SECTION ==================== */
-.home-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background: var(--gradient-home);
-  color: var(--secondary-color);
-  text-align: center;
-  transition: background 0.4s ease, color 0.4s ease;
-}
-
-.home-section h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.home-section p {
-  font-size: 20px;
-  margin-bottom: 30px;
-}
-
-.btn-group a {
-  padding: 12px 25px;
-  margin: 5px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.btn-primary {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-}
-
-.btn-primary:hover {
-  background-color: #008b94;
-}
-
-.btn-secondary {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
-}
-
-.btn-secondary:hover {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-}
-
-/* ==================== ABOUT SECTION ==================== */
-.about-section .section-title {
-  font-size: 36px;
-  text-align: center;
-  margin-bottom: 50px;
-  color: var(--text-color);
-}
-
-.about-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
-}
-
-.about-text,
-.skills {
-  flex: 1;
-  min-width: 300px;
-  color: var(--text-color);
-}
-
-.skills ul {
-  list-style: none;
-  margin-top: 20px;
-}
-
-.skills li {
-  margin-bottom: 12px;
-  font-size: 18px;
-}
-
-/* ==================== PROJECTS SECTION ==================== */
-.projects-section .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.project-card {
-  background-color: var(--section-bg);
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, background-color 0.4s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
-.project-tags {
-  margin-top: 15px;
-}
-
-.project-tags .tag {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  padding: 4px 10px;
-  border-radius: 4px;
-  font-size: 12px;
-  margin-right: 5px;
-}
-
-/* ==================== BLOG SECTION ==================== */
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.blog-post {
-  background-color: var(--section-bg);
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, background-color 0.4s ease;
-}
-
-.blog-post:hover {
-  transform: translateY(-5px);
-}
-
-/* ==================== CONTACT SECTION ==================== */
-.contact-section {
-  background-color: var(--bg-color);
-  text-align: center;
-  transition: background-color 0.4s ease;
-}
-
-.contact-section .section-title {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: var(--text-color);
-}
-
-.contact-section .section-subtitle {
-  font-size: 18px;
-  color: #666;
-  margin-bottom: 40px;
-}
-
-.contact-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact-info {
-  background-color: var(--section-bg);
-  padding: 30px 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.contact-list {
-  list-style: none;
-  text-align: left;
-}
-
-.contact-list li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  font-size: 18px;
-}
-
-.contact-list i {
-  font-size: 22px;
-  margin-right: 12px;
-  color: var(--primary-color);
-}
-
-/* Center on mobile */
-@media (max-width: 768px) {
-  .contact-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .contact-list {
-    text-align: center;
-  }
-
-  .contact-list li {
-    justify-content: center;
-  }
-}
-
-/* ==================== FOOTER ==================== */
-.footer {
-  background-color: var(--footer-bg);
-  color: var(--secondary-color);
-  text-align: center;
-  padding: 30px 20px;
-}
-
-/* ==================== RESPONSIVE ==================== */
-@media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    background-color: var(--nav-bg);
-    position: absolute;
-    top: 65px;
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-  }
-
-  .nav-menu.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .about-content {
-    flex-direction: column;
-    gap: 30px;
-  }
-}
-
-/* Hamburger animation */
-.hamburger.active .bar:nth-child(1) {
-  transform: rotate(45deg) translateY(8px);
-}
-
-.hamburger.active .bar:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active .bar:nth-child(3) {
-  transform: rotate(-45deg) translateY(-8px);
-}
-
-/* ==================== TOGGLE SWITCH ==================== */
-.theme-switch-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 15px;
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  z-index: 9999;
-  background: rgba(255,255,255,0.3);
-  backdrop-filter: blur(8px);
-  border-radius: 30px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: background 0.4s ease;
-}
-
-.theme-switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.theme-switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  inset: 0;
-  background-color: #ccc;
-  border-radius: 34px;
-  transition: 0.4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  border-radius: 50%;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: var(--primary-color);
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-#mode-text {
-  font-weight: 600;
-  color: var(--text-color);
-  transition: color 0.4s ease;
-}
-
-/* Mobile adjustments for toggle */
-@media (max-width: 600px) {
-  .theme-switch-wrapper {
-    top: 10px;
-    right: 10px;
-    padding: 10px;
-    gap: 6px;
-  }
-
-  .theme-switch {
-    width: 45px;
-    height: 24px;
-  }
-
-  .slider:before {
-    height: 18px;
-    width: 18px;
-  }
-
-  #mode-text {
-    font-size: 13px;
-  }
+/* 6. Footer Overrides */
+body.dark-mode .footer {
+    background-color: #2c2c2c;
+    border-top: 1px solid #3d3d3d;
+    color: #cccccc;
 }
