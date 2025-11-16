@@ -1,90 +1,224 @@
-/* Center everything globally */
-body {
+/* Global Reset */
+* {
   margin: 0;
   padding: 0;
-  text-align: center;               /* Centers inline and inline-block content */
-  display: flex;
-  flex-direction: column;
-  align-items: center;              /* Centers block elements horizontally */
-  justify-content: center;
+  box-sizing: border-box;
 }
 
-/* Sections centered with spacing */
-section {
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+  text-align: center; /* FULL CENTERING */
+}
+
+/* Navigation */
+.navbar {
   width: 100%;
-  max-width: 900px;                 /* Keeps layout clean on large screens */
-  margin: 40px auto;
-  text-align: center;
+  background: #111;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
 
-/* Headings always centered */
-section h1,
-section h2,
-section h3 {
-  text-align: center;
-}
-
-/* Center About text (paragraphs) */
-section p {
-  text-align: center;
-  line-height: 1.7;
-  margin: 0 auto;
-  max-width: 750px;
-}
-
-/* Center project grid */
-.projects-container {
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;          /* Centers all cards */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo a {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
   gap: 20px;
-}
-
-/* Center individual project cards */
-.project-card {
-  text-align: center;
-  width: 300px;
-  padding: 20px;
-  border-radius: 10px;
-  background: #f7f7f7;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* Center contact form */
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;              /* Centers form controls */
-  width: 100%;
-}
-
-form input,
-form textarea {
-  width: 90%;
-  max-width: 450px;
-  text-align: center;               /* Centers input text */
-  padding: 12px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-/* Center button */
-button, .btn {
-  display: inline-block;
-  margin: 15px auto;
-  text-align: center;
-}
-
-/* Navigation centered */
-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
   list-style: none;
 }
 
-/* Center footer */
-footer {
+.nav-menu li a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #fff;
+}
+
+/* Sections */
+.section {
+  padding: 100px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Home Section */
+.home-content h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.btn-group {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #555;
+  color: #fff;
+}
+
+/* About */
+.about-content {
+  text-align: center; /* force center */
+}
+
+.about-text p {
+  margin-bottom: 15px;
+}
+
+.skills ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.skills ul li {
+  margin-bottom: 10px;
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.project-card {
+  background: white;
+  padding: 25px;
   text-align: center;
-  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+}
+
+.project-icon {
+  font-size: 40px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.project-tags .tag {
+  display: inline-block;
+  background: #ddd;
+  padding: 5px 10px;
+  margin: 3px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Blog */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.blog-post {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.12);
+}
+
+.read-more {
+  margin-top: 10px;
+  color: #007bff;
+  cursor: pointer;
+}
+
+/* Contact */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.contact-list li {
+  margin-bottom: 18px;
+}
+
+/* Footer */
+.footer {
+  padding: 25px;
+  background: #111;
+  color: white;
+  margin-top: 40px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .section {
+    padding: 80px 20px;
+  }
 }
