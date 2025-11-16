@@ -5,95 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Solomon | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <style>
-    /* Smooth scrolling */
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* Back to top button */
-    #backToTop {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #007bff;
-      padding: 12px 14px;
-      color: #fff;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      font-size: 18px;
-      z-index: 1000;
-      transition: 0.3s ease;
-    }
-
-    #backToTop:hover {
-      transform: translateY(-5px);
-    }
-
-    /* Fade-in section animation */
-    .section {
-      opacity: 0;
-      transform: translateY(40px);
-    }
-
-    /* Home text animation */
-    .home-content h1, .home-content p, .btn-group {
-      animation: fadeInUp 1.2s ease forwards;
-      opacity: 0;
-    }
-
-    .home-content h1 { animation-delay: 0.3s; }
-    .home-content p { animation-delay: 0.6s; }
-    .btn-group { animation-delay: 0.9s; }
-
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Hover effects */
-    .btn:hover {
-      transform: translateY(-3px);
-      transition: 0.3s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 25px rgba(0,0,0,0.15);
-      transition: 0.4s ease;
-    }
-
-    .nav-link:hover {
-      color: #007bff;
-    }
-
-    /* Dark mode */
-    .theme-toggle {
-      cursor: pointer;
-      font-size: 20px;
-      margin-left: 15px;
-    }
-
-    .dark-mode {
-      background: #111 !important;
-      color: #eaeaea !important;
-    }
-
-    .dark-mode .project-card {
-      background: #1b1b1b;
-      color: #fff;
-    }
-
-    .dark-mode .navbar, 
-    .dark-mode .footer {
-      background: #000;
-    }
-  </style>
 </head>
-
 <body>
 
   <!-- Navigation -->
@@ -109,12 +23,6 @@
         <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
         <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-
-      <!-- Dark Mode -->
-      <div class="theme-toggle">
-        <i class="fas fa-moon"></i>
-      </div>
-
       <div class="hamburger">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -164,9 +72,7 @@
     <div class="container">
       <h2 class="section-title">My Projects</h2>
       <p class="section-subtitle">These projects are under development and will be released soon 🚧</p>
-
       <div class="projects-grid">
-
         <div class="project-card">
           <div class="project-icon"><i class="fas fa-store"></i></div>
           <h3>Retail Store Management System (C++)</h3>
@@ -199,7 +105,6 @@
             <span class="tag">Responsive Design</span>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -209,7 +114,6 @@
     <div class="container">
       <h2 class="section-title">Blog & Articles</h2>
       <p class="coming-soon">These posts are under development and will be published soon 🚧</p>
-
       <div class="blog-grid">
         <article class="blog-post">
           <h3>Getting Started with C++</h3>
@@ -237,47 +141,14 @@
     <div class="container">
       <h2 class="section-title">Contact Me</h2>
       <p class="section-subtitle">Feel free to reach out through any of the options below.</p>
-
       <div class="contact-content">
-        <div class="contact-info">
-          <ul class="contact-list">
-            <li><i class="fas fa-envelope"></i>
-              <div>
-                <strong>Email:</strong>
-                <a href="mailto:solomonfentaw884@gmail.com">solomonfentaw884@gmail.com</a>
-              </div>
-            </li>
-
-            <li><i class="fas fa-phone"></i>
-              <div>
-                <strong>Phone:</strong>
-                <a href="tel:+251914131094">+251 914131094</a>
-              </div>
-            </li>
-
-            <li><i class="fas fa-location-dot"></i>
-              <div>
-                <strong>Location:</strong>
-                <span>Ethiopia</span>
-              </div>
-            </li>
-
-            <li><i class="fab fa-linkedin"></i>
-              <div>
-                <strong>LinkedIn:</strong>
-                <a href="https://www.linkedin.com/in/solomon-fentaw" target="_blank">My LinkedIn</a>
-              </div>
-            </li>
-
-            <li><i class="fab fa-github"></i>
-              <div>
-                <strong>GitHub:</strong>
-                <a href="https://github.com/Henry24-94" target="_blank">My GitHub</a>
-              </div>
-            </li>
-
-          </ul>
-        </div>
+        <ul class="contact-list">
+          <li><i class="fas fa-envelope"></i><div><strong>Email:</strong> <a href="mailto:solomonfentaw884@gmail.com">solomonfentaw884@gmail.com</a></div></li>
+          <li><i class="fas fa-phone"></i><div><strong>Phone:</strong> <a href="tel:+251914131094">+251 914131094</a></div></li>
+          <li><i class="fas fa-location-dot"></i><div><strong>Location:</strong> <span>Ethiopia</span></div></li>
+          <li><i class="fab fa-linkedin"></i><div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/solomon-fentaw" target="_blank">My LinkedIn</a></div></li>
+          <li><i class="fab fa-github"></i><div><strong>GitHub:</strong> <a href="https://github.com/Henry24-94" target="_blank">My GitHub</a></div></li>
+        </ul>
       </div>
     </div>
   </section>
@@ -289,39 +160,6 @@
       <p>All Rights Reserved</p>
     </div>
   </footer>
-
-  <!-- Back to Top -->
-  <div id="backToTop"><i class="fas fa-arrow-up"></i></div>
-
-  <script>
-    /* Reveal sections on scroll */
-    const sections = document.querySelectorAll('.section');
-
-    window.addEventListener('scroll', () => {
-      sections.forEach(sec => {
-        if (sec.getBoundingClientRect().top < window.innerHeight - 100) {
-          sec.style.opacity = 1;
-          sec.style.transform = "translateY(0)";
-          sec.style.transition = "0.8s ease";
-        }
-      });
-    });
-
-    /* Back to top button */
-    window.addEventListener('scroll', () => {
-      const btn = document.getElementById('backToTop');
-      btn.style.display = window.scrollY > 300 ? 'block' : 'none';
-    });
-
-    document.getElementById('backToTop').onclick = () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-
-    /* Dark mode toggle */
-    document.querySelector('.theme-toggle').addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-    });
-  </script>
 
   <script src="script.js"></script>
 </body>
