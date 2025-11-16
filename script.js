@@ -13,5 +13,5 @@ document.querySelectorAll(".nav-link").forEach(link =>
     })
 );
 
-// Smooth scrolling (modern browsers support this)
+// Smooth scrolling (modern browsers)
 document.documentElement.style.scrollBehavior = "smooth";
