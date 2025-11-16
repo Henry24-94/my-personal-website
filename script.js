@@ -1,43 +1,51 @@
+// Ensure the script runs only after the entire page is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.getElementById('dark-mode-toggle');
-    const body = document.body;
-    const storageKey = 'solomon-color-scheme';
-    const darkIcon = '<i class="fas fa-sun"></i>'; // Sun icon for light mode
-    const lightIcon = '<i class="fas fa-moon"></i>'; // Moon icon for dark mode
 
-    // 1. Function to apply the theme
-    const applyTheme = (theme) => {
-        if (theme === 'dark') {
-            body.classList.add('dark-mode');
-            toggle.innerHTML = darkIcon; // Show sun icon when in dark mode
-        } else {
-            body.classList.remove('dark-mode');
-            toggle.innerHTML = lightIcon; // Show moon icon when in light mode
-        }
-    };
+    // ===================================
+    // 1. Hamburger toggle functionality
+    // ===================================
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
 
-    // 2. Initial load: Check for stored preference or system preference
-    const savedPreference = localStorage.getItem(storageKey);
-    const systemPreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    if (savedPreference) {
-        // Use saved preference
-        applyTheme(savedPreference);
-    } else if (systemPreference) {
-        // Use system preference if no saved preference exists
-        applyTheme('dark');
-    } else {
-        // Default to light mode (already set by applyTheme)
-        applyTheme('light');
+    if (hamburger && navMenu) {
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
     }
 
-    // 3. Toggle click handler
-    toggle.addEventListener('click', () => {
-        const isCurrentlyDark = body.classList.contains('dark-mode');
-        const newTheme = isCurrentlyDark ? 'light' : 'dark';
+    // ===================================
+    // 2. Dark/Light mode toggle functionality
+    // ===================================
+    const toggleSwitch = document.getElementById('checkbox'); // Changed from 'theme-checkbox' to 'checkbox' to match the HTML ID I provided previously
+    const modeText = document.getElementById('mode-text');
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    const htmlElement = document.documentElement;
 
-        // Apply and save the new theme
-        applyTheme(newTheme);
-        localStorage.setItem(storageKey, newTheme);
-    });
+    if (toggleSwitch && modeText) {
+        // Apply saved theme on load
+        htmlElement.setAttribute('data-theme', currentTheme);
+
+        if (currentTheme === 'dark') {
+            toggleSwitch.checked = true;
+            // If the current mode is dark, the text should offer to switch to Light Mode.
+            modeText.textContent = 'Light Mode';
+        } else {
+            // If the current mode is light, the text should offer to switch to Dark Mode.
+            modeText.textContent = 'Dark Mode';
+        }
+
+        // Event listener for theme change
+        toggleSwitch.addEventListener('change', function() {
+            if (this.checked) {
+                htmlElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                modeText.textContent = 'Light Mode'; // Now suggesting the other mode
+            } else {
+                htmlElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                modeText.textContent = 'Dark Mode'; // Now suggesting the other mode
+            }
+        });
+    }
 });
