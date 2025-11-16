@@ -1,52 +1,39 @@
-document.addEventListener('DOMContentLoaded', () => {
+/* Mobile Menu Toggle */
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
 
-    // ===================================
-    // 1. Hamburger toggle functionality (Mobile Menu)
-    // ===================================
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
+hamburger.addEventListener("click", () => {
+  navMenu.style.display = navMenu.style.display === "flex" ? "none" : "flex";
+});
 
-    if (hamburger && navMenu) {
-        hamburger.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        });
-    }
+/* Close menu when clicking a link (mobile) */
+document.querySelectorAll(".nav-link").forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu.style.display = "none";
+  });
+});
 
-    // ===================================
-    // 2. Dark/Light mode toggle functionality
-    // ===================================
-    const toggleSwitch = document.getElementById('checkbox'); 
-    const modeText = document.getElementById('mode-text');
-    const htmlElement = document.documentElement;
+/* Dark Mode Toggle */
+const toggle = document.querySelector(".theme-toggle");
 
-    // Retrieve saved theme or default to 'light'
-    const currentTheme = localStorage.getItem('theme') || 'light'; 
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
 
-    if (toggleSwitch && modeText) {
-        // Apply saved theme on page load
-        htmlElement.setAttribute('data-theme', currentTheme);
+/* Smooth section reveal */
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = "1";
+        entry.target.style.transform = "translateY(0px)";
+        entry.target.style.transition = "0.8s ease";
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
 
-        if (currentTheme === 'dark') {
-            toggleSwitch.checked = true;
-            modeText.textContent = 'Light Mode'; 
-        } else {
-            modeText.textContent = 'Dark Mode';
-        }
-
-        // Event listener for theme change
-        toggleSwitch.addEventListener('change', function() {
-            if (this.checked) {
-                // Switch to Dark Mode
-                htmlElement.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
-                modeText.textContent = 'Light Mode'; 
-            } else {
-                // Switch to Light Mode
-                htmlElement.setAttribute('data-theme', 'light');
-                localStorage.setItem('theme', 'light');
-                modeText.textContent = 'Dark Mode'; 
-            }
-        });
-    }
+document.querySelectorAll(".section").forEach(sec => {
+  observer.observe(sec);
 });
