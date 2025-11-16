@@ -67,15 +67,18 @@ a { text-decoration: none; color: inherit; }
 /* Mobile Responsive */
 @media (max-width: 992px) { .projects-grid, .blog-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); } }
 @media (max-width: 768px) {
-  .nav-menu { display: none; flex-direction: column; background: #111; width: 100%; padding: 15px 0; }
+  .nav-menu { display: none; flex-direction: column; background: #111; width: 100%; padding: 10px 0; text-align: center; }
   .nav-menu.active { display: flex; }
+  .nav-menu li { margin: 10px 0; }
   .hamburger { display: block; }
   .section { padding: 60px 15px; }
   .projects-grid, .blog-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) {
-  .home-content h1 { font-size: 26px; }
-  .btn { width: 80%; }
-  .contact-list li { min-width: 90%; flex-direction: column; justify-content: center; text-align: center; }
+  .home-content h1 { font-size: 24px; }
+  .home-content p { font-size: 14px; }
+  .btn { width: 90%; font-size: 16px; padding: 10px; }
+  .contact-list li { flex-direction: column; align-items: center; text-align: center; min-width: 90%; }
   .contact-list li i { margin-bottom: 8px; }
+  .contact-list li div { text-align: center; }
 }
