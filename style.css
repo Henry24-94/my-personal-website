@@ -374,6 +374,13 @@ body {
   transition: background 0.4s ease;
 }
 
+/* ** CRUCIAL ADDITION FOR DARK MODE STYLE CONSISTENCY ** */
+[data-theme="dark"] .theme-switch-wrapper {
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+/* ** END ADDITION ** */
+
 .theme-switch {
   position: relative;
   display: inline-block;
@@ -444,4 +451,4 @@ input:checked + .slider:before {
   #mode-text {
     font-size: 13px;
   }
-} 
+}
