@@ -1,214 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solomon | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solomon | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Back to top button */
+    #backToTop {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #007bff;
+      padding: 12px 14px;
+      color: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      font-size: 18px;
+      z-index: 1000;
+      transition: 0.3s ease;
+    }
+
+    #backToTop:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Fade-in section animation */
+    .section {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    /* Home text animation */
+    .home-content h1, .home-content p, .btn-group {
+      animation: fadeInUp 1.2s ease forwards;
+      opacity: 0;
+    }
+
+    .home-content h1 { animation-delay: 0.3s; }
+    .home-content p { animation-delay: 0.6s; }
+    .btn-group { animation-delay: 0.9s; }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Hover effects */
+    .btn:hover {
+      transform: translateY(-3px);
+      transition: 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+      transition: 0.4s ease;
+    }
+
+    .nav-link:hover {
+      color: #007bff;
+    }
+
+    /* Dark mode */
+    .theme-toggle {
+      cursor: pointer;
+      font-size: 20px;
+      margin-left: 15px;
+    }
+
+    .dark-mode {
+      background: #111 !important;
+      color: #eaeaea !important;
+    }
+
+    .dark-mode .project-card {
+      background: #1b1b1b;
+      color: #fff;
+    }
+
+    .dark-mode .navbar, 
+    .dark-mode .footer {
+      background: #000;
+    }
+  </style>
 </head>
+
 <body>
-    <nav class="navbar">
-    <div class="nav-container">
-      <div class="nav-logo">
-        <a href="#home">Solomon</a>
-      </div>
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a href="#home" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="#about" class="nav-link">About</a>
-        </li>
-        <li class="nav-item">
-          <a href="#projects" class="nav-link">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a href="#blog" class="nav-link">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a href="#contact" class="nav-link">Contact</a>
-        </li>
-      </ul>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </div>
-  </nav>
 
-  <div class="theme-switch-wrapper">
-      <span id="mode-text">Dark Mode</span>
-      <label class="theme-switch" for="checkbox">
-          <input type="checkbox" id="checkbox" />
-          <div class="slider"></div>
-      </label>
-  </div>
-      <section id="home" class="section home-section">
-    <div class="container">
-      <div class="home-content">
-        <h1>Welcome To My Personal Website</h1>
-        <p>Created by Solomon — a 3rd-year Computer Science student.</p>
-        <div class="btn-group">
-          <a href="#projects" class="btn btn-primary">View My Work</a>
-          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-        </div>
-      </div>
-      <div class="image-box">
-              </div>
-    </div>
-  </section>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="#home">Solomon</a>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
 
-    <section id="about" class="section about-section">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <div class="about-content">
-        <div class="about-text">
-          <p>Hello! I'm <strong>Solomon</strong>, a 3rd-year Computer Science student with a deep interest in coding, design, and technology. I enjoy building small but useful projects that help me learn real-world programming skills.</p>
-          <p>This website is part of my personal journey — it's a space to share what I'm learning, show my projects, and connect with others in tech.</p>
-        </div>
-        <div class="skills">
-          <h3>Skills & Tools</h3>
-          <ul>
-            <li><i class="fas fa-code"></i> C++ (Data structures, file handling, OOP)</li>
-            <li><i class="fab fa-java"></i> Java (OOP, GUI, collections)</li>
-            <li><i class="fab fa-html5"></i> HTML, CSS, basic JavaScript</li>
-            <li><i class="fab fa-git-alt"></i> GitHub and version control</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+      <!-- Dark Mode -->
+      <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+      </div>
 
-    <section id="projects" class="section projects-section">
-    <div class="container">
-      <h2 class="section-title">My Projects</h2>
-      <p class="section-subtitle">These projects are under development and will be released soon 🚧</p>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-icon">
-            <i class="fas fa-store"></i>
-          </div>
-          <h3>Retail Store Management System (C++)</h3>
-          <p>Console app using linked lists, file I/O, and stock management functions (add, update, remove, search).</p>
-          <div class="project-tags">
-            <span class="tag">C++</span>
-            <span class="tag">File I/O</span>
-            <span class="tag">Data Structures</span>
-          </div>
-        </div>
-        
-        <div class="project-card">
-          <div class="project-icon">
-            <i class="fas fa-calculator"></i>
-          </div>
-          <h3>Calculator GUI (Java Swing)</h3>
-          <p>Graphical calculator built with JFrame supporting arithmetic operations and keyboard input handling.</p>
-          <div class="project-tags">
-            <span class="tag">Java</span>
-            <span class="tag">Swing</span>
-            <span class="tag">GUI</span>
-          </div>
-        </div>
-        
-        <div class="project-card">
-          <div class="project-icon">
-            <i class="fas fa-globe"></i>
-          </div>
-          <h3>Personal Website (HTML & CSS)</h3>
-          <p>This site — a clean multi-page HTML/CSS site deployed with GitHub Pages to present personal information and projects.</p>
-          <div class="project-tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">Responsive Design</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
 
-    <section id="blog" class="section blog-section">
-    <div class="container">
-      <h2 class="section-title">Blog & Articles</h2>
-      <p class="coming-soon">These posts are under development and will be published soon 🚧</p>
-      <div class="blog-grid">
-        <article class="blog-post">
-          <h3>Getting Started with C++</h3>
-          <p>Step-by-step beginner-friendly guide to learning C++ basics, compiling, and running your first program.</p>
-          <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
-        </article>
-        
-        <article class="blog-post">
-          <h3>Building a Java GUI Calculator</h3>
-          <p>A practical guide to using Java Swing for creating a simple calculator application with keyboard support.</p>
-          <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
-        </article>
-        
-        <article class="blog-post">
-          <h3>Tips for Organizing Your Personal Website</h3>
-          <p>Learn how to structure your website, keep it clean, and create pages that are easy to maintain.</p>
-          <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
-        </article>
-      </div>
-    </div>
-  </section>
+  <!-- Home Section -->
+  <section id="home" class="section home-section">
+    <div class="container">
+      <div class="home-content">
+        <h1>Welcome To My Personal Website</h1>
+        <p>Created by Solomon — a 3rd-year Computer Science student.</p>
+        <div class="btn-group">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact" class="section contact-section">
-    <div class="container">
-      <h2 class="section-title">Contact Me</h2>
-      <p class="section-subtitle">Feel free to reach out through any of the options below.</p>
-      <div class="contact-content">
-        <div class="contact-info">
-          <ul class="contact-list">
-            <li>
-              <i class="fas fa-envelope"></i>
-              <div>
-                <strong>Email:</strong>
-                <a href="mailto:solomonfentaw884@gmail.com">solomonfentaw884@gmail.com</a>
-              </div>
-            </li>
-            <li>
-              <i class="fas fa-phone"></i>
-              <div>
-                <strong>Phone:</strong>
-                <a href="tel:+251914131094">+251 914131094</a>
-              </div>
-            </li>
-            <li>
-              <i class="fas fa-location-dot"></i>
-              <div>
-                <strong>Location:</strong>
-                <span>Ethiopia</span>
-              </div>
-            </li>
-            <li>
-              <i class="fab fa-linkedin"></i>
-              <div>
-                <strong>LinkedIn:</strong>
-                <a href="https://www.linkedin.com/in/solomon-fentaw" target="_blank">My LinkedIn</a>
-              </div>
-            </li>
-            <li>
-              <i class="fab fa-github"></i>
-              <div>
-                <strong>GitHub:</strong>
-                <a href="https://github.com/Henry24-94" target="_blank">My GitHub</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- About Section -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Hello! I'm <strong>Solomon</strong>, a 3rd-year Computer Science student with a deep interest in coding, design, and technology. I enjoy building small but useful projects that help me learn real-world programming skills.</p>
+          <p>This website is part of my personal journey — it's a space to share what I'm learning, show my projects, and connect with others in tech.</p>
+        </div>
+        <div class="skills">
+          <h3>Skills & Tools</h3>
+          <ul>
+            <li><i class="fas fa-code"></i> C++ (Data structures, file handling, OOP)</li>
+            <li><i class="fab fa-java"></i> Java (OOP, GUI, collections)</li>
+            <li><i class="fab fa-html5"></i> HTML, CSS, basic JavaScript</li>
+            <li><i class="fab fa-git-alt"></i> GitHub and version control</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <footer class="footer">
-    <div class="container">
-      <p>© 2025 Solomon — Built with clarity and simplicity.</p>
-      <p>All Rights Reserved</p>
-    </div>
-  </footer>
+  <!-- Projects Section -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <h2 class="section-title">My Projects</h2>
+      <p class="section-subtitle">These projects are under development and will be released soon 🚧</p>
 
-  <script src="script.js"></script>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-store"></i></div>
+          <h3>Retail Store Management System (C++)</h3>
+          <p>Console app using linked lists, file I/O, and stock management functions (add, update, remove, search).</p>
+          <div class="project-tags">
+            <span class="tag">C++</span>
+            <span class="tag">File I/O</span>
+            <span class="tag">Data Structures</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-calculator"></i></div>
+          <h3>Calculator GUI (Java Swing)</h3>
+          <p>Graphical calculator built with JFrame supporting arithmetic operations and keyboard input handling.</p>
+          <div class="project-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Swing</span>
+            <span class="tag">GUI</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-globe"></i></div>
+          <h3>Personal Website (HTML & CSS)</h3>
+          <p>This site — a clean multi-page HTML/CSS site deployed with GitHub Pages to present personal information and projects.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Responsive Design</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="section blog-section">
+    <div class="container">
+      <h2 class="section-title">Blog & Articles</h2>
+      <p class="coming-soon">These posts are under development and will be published soon 🚧</p>
+
+      <div class="blog-grid">
+        <article class="blog-post">
+          <h3>Getting Started with C++</h3>
+          <p>Step-by-step beginner-friendly guide to learning C++ basics, compiling, and running your first program.</p>
+          <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
+        </article>
+
+        <article class="blog-post">
+          <h3>Building a Java GUI Calculator</h3>
+          <p>A practical guide to using Java Swing for creating a simple calculator application with keyboard support.</p>
+          <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
+        </article>
+
+        <article class="blog-post">
+          <h3>Tips for Organizing Your Personal Website</h3>
+          <p>Learn how to structure your website, keep it clean, and create pages that are easy to maintain.</p>
+          <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+      <p class="section-subtitle">Feel free to reach out through any of the options below.</p>
+
+      <div class="contact-content">
+        <div class="contact-info">
+          <ul class="contact-list">
+            <li><i class="fas fa-envelope"></i>
+              <div>
+                <strong>Email:</strong>
+                <a href="mailto:solomonfentaw884@gmail.com">solomonfentaw884@gmail.com</a>
+              </div>
+            </li>
+
+            <li><i class="fas fa-phone"></i>
+              <div>
+                <strong>Phone:</strong>
+                <a href="tel:+251914131094">+251 914131094</a>
+              </div>
+            </li>
+
+            <li><i class="fas fa-location-dot"></i>
+              <div>
+                <strong>Location:</strong>
+                <span>Ethiopia</span>
+              </div>
+            </li>
+
+            <li><i class="fab fa-linkedin"></i>
+              <div>
+                <strong>LinkedIn:</strong>
+                <a href="https://www.linkedin.com/in/solomon-fentaw" target="_blank">My LinkedIn</a>
+              </div>
+            </li>
+
+            <li><i class="fab fa-github"></i>
+              <div>
+                <strong>GitHub:</strong>
+                <a href="https://github.com/Henry24-94" target="_blank">My GitHub</a>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Solomon — Built with clarity and simplicity.</p>
+      <p>All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <div id="backToTop"><i class="fas fa-arrow-up"></i></div>
+
+  <script>
+    /* Reveal sections on scroll */
+    const sections = document.querySelectorAll('.section');
+
+    window.addEventListener('scroll', () => {
+      sections.forEach(sec => {
+        if (sec.getBoundingClientRect().top < window.innerHeight - 100) {
+          sec.style.opacity = 1;
+          sec.style.transform = "translateY(0)";
+          sec.style.transition = "0.8s ease";
+        }
+      });
+    });
+
+    /* Back to top button */
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('backToTop');
+      btn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+
+    document.getElementById('backToTop').onclick = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    /* Dark mode toggle */
+    document.querySelector('.theme-toggle').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+
+  <script src="script.js"></script>
 </body>
 </html>
