@@ -1,453 +1,280 @@
-/* ==================== GENERAL STYLES ==================== */
+/* General Styling */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  /* Light Mode Variables */
-  --bg-color: #f8f9fa;
-  --text-color: #333;
-  --primary-color: #00bcd4;
-  --secondary-color: #fff;
-  --section-bg: #fff;
-  --nav-bg: #111;
-  --footer-bg: #111;
-  --gradient-home: linear-gradient(to right, #00bcd4, #006064);
-}
-
-[data-theme="dark"] {
-  /* Dark Mode Variables */
-  --bg-color: #121212;
-  --text-color: #ffffff;
-  --primary-color: #2196F3;
-  --secondary-color: #1e1e1e;
-  --section-bg: #1e1e1e;
-  --nav-bg: #111;
-  --footer-bg: #111;
-  --gradient-home: linear-gradient(to right, #006064, #004d4d);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--bg-color);
-  transition: background-color 0.4s ease, color 0.4s ease;
+  background: #f7f7f7;
+  color: #222;
+  line-height: 1.6;
 }
 
+/* Container */
 .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.section {
-  padding: 80px 0;
-  background-color: var(--bg-color);
-  transition: background-color 0.4s ease;
-}
-
-/* ==================== NAVIGATION ==================== */
+/* Navigation */
 .navbar {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  background-color: var(--nav-bg);
-  color: var(--text-color);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  transition: background-color 0.4s ease;
+  background: #fff;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-logo a {
-  font-size: 24px;
-  font-weight: bold;
-  text-decoration: none;
-  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 700;
+  color: #007bff;
 }
 
 .nav-menu {
-  display: flex;
-  list-style: none;
-  gap: 25px;
+  display: flex;
+  gap: 25px;
 }
 
-.nav-item a {
-  color: var(--secondary-color);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+.nav-menu li {
+  list-style: none;
 }
 
-.nav-item a:hover {
-  color: var(--primary-color);
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: 0.3s;
 }
 
-/* Hamburger */
+.nav-link:hover {
+  color: #007bff;
+}
+
+.theme-toggle {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Hamburger (Mobile) */
 .hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
 }
 
 .bar {
-  height: 3px;
-  width: 25px;
-  background-color: var(--secondary-color);
-  border-radius: 3px;
-  transition: all 0.3s ease;
+  width: 26px;
+  height: 3px;
+  background: #333;
+  margin: 4px 0;
+  transition: 0.4s;
 }
 
-/* ==================== HOME SECTION ==================== */
+/* Sections */
+.section {
+  padding: 100px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* Home Section */
 .home-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background: var(--gradient-home);
-  color: var(--secondary-color);
-  text-align: center;
-  transition: background 0.4s ease, color 0.4s ease;
+  background: linear-gradient(to right, #007bff, #0056c7);
+  color: #fff;
+  padding-top: 140px;
+  text-align: center;
 }
 
-.home-section h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
+.home-content h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
 }
 
-.home-section p {
-  font-size: 20px;
-  margin-bottom: 30px;
+.home-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 
-.btn-group a {
-  padding: 12px 25px;
-  margin: 5px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
+.btn-group .btn {
+  display: inline-block;
+  padding: 12px 20px;
+  text-decoration: none;
+  margin: 5px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-}
-
-.btn-primary:hover {
-  background-color: #008b94;
+  background: #fff;
+  color: #007bff;
 }
 
 .btn-secondary {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
 }
 
-.btn-secondary:hover {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-}
-
-/* ==================== ABOUT SECTION ==================== */
-.about-section .section-title {
-  font-size: 36px;
-  text-align: center;
-  margin-bottom: 50px;
-  color: var(--text-color);
-}
-
+/* About Section */
 .about-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
 }
 
-.about-text,
+.about-text {
+  flex: 2;
+  font-size: 17px;
+}
+
 .skills {
-  flex: 1;
-  min-width: 300px;
-  color: var(--text-color);
+  flex: 1;
 }
 
-.skills ul {
-  list-style: none;
-  margin-top: 20px;
+.skills ul li {
+  list-style: none;
+  margin-bottom: 10px;
 }
 
-.skills li {
-  margin-bottom: 12px;
-  font-size: 18px;
-}
-
-/* ==================== PROJECTS SECTION ==================== */
-.projects-section .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
 }
 
 .project-card {
-  background-color: var(--section-bg);
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, background-color 0.4s ease;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.4s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
+.project-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #007bff;
 }
 
 .project-tags {
-  margin-top: 15px;
+  margin-top: 12px;
 }
 
-.project-tags .tag {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  padding: 4px 10px;
-  border-radius: 4px;
-  font-size: 12px;
-  margin-right: 5px;
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  background: #e9e9e9;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-right: 5px;
 }
 
-/* ==================== BLOG SECTION ==================== */
+/* Blog */
 .blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
 .blog-post {
-  background-color: var(--section-bg);
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, background-color 0.4s ease;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s ease;
 }
 
 .blog-post:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-/* ==================== CONTACT SECTION ==================== */
-.contact-section {
-  background-color: var(--bg-color);
-  text-align: center;
-  transition: background-color 0.4s ease;
+.read-more {
+  margin-top: 10px;
+  color: #007bff;
+  cursor: pointer;
 }
 
-.contact-section .section-title {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: var(--text-color);
-}
-
-.contact-section .section-subtitle {
-  font-size: 18px;
-  color: #666;
-  margin-bottom: 40px;
-}
-
-.contact-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact-info {
-  background-color: var(--section-bg);
-  padding: 30px 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.contact-list {
-  list-style: none;
-  text-align: left;
-}
-
+/* Contact */
 .contact-list li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  font-size: 18px;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 18px;
 }
 
 .contact-list i {
-  font-size: 22px;
-  margin-right: 12px;
-  color: var(--primary-color);
+  font-size: 22px;
+  color: #007bff;
 }
 
-/* Center on mobile */
-@media (max-width: 768px) {
-  .contact-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .contact-list {
-    text-align: center;
-  }
-
-  .contact-list li {
-    justify-content: center;
-  }
-}
-
-/* ==================== FOOTER ==================== */
+/* Footer */
 .footer {
-  background-color: var(--footer-bg);
-  color: var(--secondary-color);
-  text-align: center;
-  padding: 30px 20px;
+  background: #000;
+  color: #fff;
+  padding: 25px 0;
+  text-align: center;
+  margin-top: 50px;
 }
 
-/* ==================== RESPONSIVE ==================== */
+/* Mobile Responsive */
 @media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    background-color: var(--nav-bg);
-    position: absolute;
-    top: 65px;
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-  }
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 5%;
+    background: #fff;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
 
-  .nav-menu.active {
-    display: flex;
-  }
+  .hamburger {
+    display: flex;
+  }
 
-  .hamburger {
-    display: flex;
-  }
+  .about-content {
+    flex-direction: column;
+  }
 
-  .about-content {
-    flex-direction: column;
-    gap: 30px;
-  }
+  .home-content h1 {
+    font-size: 30px;
+  }
 }
 
-/* Hamburger animation */
-.hamburger.active .bar:nth-child(1) {
-  transform: rotate(45deg) translateY(8px);
+/* Dark Mode */
+.dark-mode {
+  background: #111 !important;
+  color: #fff !important;
 }
 
-.hamburger.active .bar:nth-child(2) {
-  opacity: 0;
+.dark-mode .navbar,
+.dark-mode .footer {
+  background: #000;
 }
 
-.hamburger.active .bar:nth-child(3) {
-  transform: rotate(-45deg) translateY(-8px);
-}
-
-/* ==================== TOGGLE SWITCH ==================== */
-.theme-switch-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 15px;
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  z-index: 9999;
-  background: rgba(255,255,255,0.3);
-  backdrop-filter: blur(8px);
-  border-radius: 30px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: background 0.4s ease;
-}
-
-/* Added rule to make the toggle wrapper dark in dark mode */
-[data-theme="dark"] .theme-switch-wrapper {
-    background: rgba(0, 0, 0, 0.3);
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
-}
-
-.theme-switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.theme-switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  inset: 0;
-  background-color: #ccc;
-  border-radius: 34px;
-  transition: 0.4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  border-radius: 50%;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: var(--primary-color);
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-#mode-text {
-  font-weight: 600;
-  color: var(--text-color);
-  transition: color 0.4s ease;
-}
-
-/* Mobile adjustments for toggle */
-@media (max-width: 600px) {
-  .theme-switch-wrapper {
-    top: 10px;
-    right: 10px;
-    padding: 10px;
-    gap: 6px;
-  }
-
-  .theme-switch {
-    width: 45px;
-    height: 24px;
-  }
-
-  .slider:before {
-    height: 18px;
-    width: 18px;
-  }
-
-  #mode-text {
-    font-size: 13px;
-  }
+.dark-mode .project-card,
+.dark-mode .blog-post {
+  background: #1f1f1f;
 }
