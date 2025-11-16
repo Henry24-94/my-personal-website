@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // ===================================
-    // 1. Hamburger toggle functionality
+    // 1. Hamburger toggle functionality (Mobile Menu)
     // ===================================
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".nav-menu");
@@ -29,10 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (currentTheme === 'dark') {
             toggleSwitch.checked = true;
-            // Display the mode the switch will change to
             modeText.textContent = 'Light Mode'; 
         } else {
-            // Display the mode the switch will change to
             modeText.textContent = 'Dark Mode';
         }
 
