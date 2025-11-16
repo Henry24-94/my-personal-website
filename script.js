@@ -1,31 +1,54 @@
-// Hamburger toggle
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+document.addEventListener('DOMContentLoaded', () => {
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-});
+    // ===================================
+    // 1. Hamburger toggle functionality
+    // ===================================
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
 
-// Dark/Bright mode toggle
-const toggleSwitch = document.getElementById('theme-checkbox');
-const modeText = document.getElementById('mode-text');
-const currentTheme = localStorage.getItem('theme') || 'light';
+    if (hamburger && navMenu) {
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+    }
 
-document.documentElement.setAttribute('data-theme', currentTheme);
-if (currentTheme === 'dark') {
-  toggleSwitch.checked = true;
-  modeText.textContent = 'Light Mode';
-}
+    // ===================================
+    // 2. Dark/Light mode toggle functionality
+    // ===================================
+    const toggleSwitch = document.getElementById('checkbox'); 
+    const modeText = document.getElementById('mode-text');
+    const htmlElement = document.documentElement;
 
-toggleSwitch.addEventListener('change', function() {
-  if (this.checked) {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('theme', 'dark');
-    modeText.textContent = 'Light Mode';
-  } else {
-    document.documentElement.setAttribute('data-theme', 'light');
-    localStorage.setItem('theme', 'light');
-    modeText.textContent = 'Dark Mode';
-  }
+    // Retrieve saved theme or default to 'light'
+    const currentTheme = localStorage.getItem('theme') || 'light'; 
+
+    if (toggleSwitch && modeText) {
+        // Apply saved theme on page load
+        htmlElement.setAttribute('data-theme', currentTheme);
+
+        if (currentTheme === 'dark') {
+            toggleSwitch.checked = true;
+            // Display the mode the switch will change to
+            modeText.textContent = 'Light Mode'; 
+        } else {
+            // Display the mode the switch will change to
+            modeText.textContent = 'Dark Mode';
+        }
+
+        // Event listener for theme change
+        toggleSwitch.addEventListener('change', function() {
+            if (this.checked) {
+                // Switch to Dark Mode
+                htmlElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                modeText.textContent = 'Light Mode'; 
+            } else {
+                // Switch to Light Mode
+                htmlElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                modeText.textContent = 'Dark Mode'; 
+            }
+        });
+    }
 });
