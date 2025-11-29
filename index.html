@@ -3,170 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solomon | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Solomon - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="nav-logo"><a href="#home">Solomon</a></div>
+  <!-- Header & Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Solomon</div>
 
       <ul class="nav-menu">
-        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-        <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
-        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#blog" class="nav-link">Blog</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
 
-      <!-- Theme Toggle -->
-      <button id="theme-toggle" class="theme-toggle">
-        <i class="fas fa-moon"></i>
-      </button>
+      <!-- Dark/Light Mode Toggle -->
+      <button class="theme-toggle" id="theme-toggle">🌙</button>
 
-      <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
-    </div>
-  </nav>
+      <!-- Mobile hamburger -->
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
 
   <!-- Home Section -->
-  <section id="home" class="section home-section animate">
-    <div class="container">
-      <div class="home-content">
-        <h1>Welcome To My Personal Website</h1>
-        <p>Created by Solomon — a 3rd-year Computer Science student.</p>
-        <div class="btn-group">
-          <a href="#projects" class="btn btn-primary">View My Work</a>
-          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-        </div>
+  <section id="home" class="animate">
+    <div class="home-content fade-up">
+      <h1>Hi, I'm Solomon</h1>
+      <p>Full Stack Developer | Problem Solver | Tech Enthusiast</p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="animate">
+    <h2 class="section-title fade-up">My Projects</h2>
+
+    <div class="projects-container">
+
+      <div class="project-card slide-up">
+        <h3>Crypto Screener</h3>
+        <p>A real-time crypto screener using APIs allowing users to track prices, volumes and market trends.</p>
       </div>
+
+      <div class="project-card slide-up">
+        <h3>Dragon Game UI</h3>
+        <p>A simple UI-based game designed in Python (Tkinter), featuring attack systems and characters.</p>
+      </div>
+
+      <div class="project-card slide-up">
+        <h3>Chat App</h3>
+        <p>A real-time chat application using websockets enabling instant communication.</p>
+      </div>
+
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="section about-section animate">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <div class="about-content">
-        <div class="about-text">
-          <p>Hello! I'm <strong>Solomon</strong>, a 3rd-year Computer Science student with a deep interest in coding, design, and technology. I enjoy building small but useful projects that help me learn real-world programming skills.</p>
-          <p>This website is part of my personal journey — it's a space to share what I'm learning, show my projects, and connect with others in tech.</p>
-        </div>
-        <div class="skills">
-          <h3>Skills & Tools</h3>
-          <ul>
-            <li><i class="fas fa-code"></i> C++ (Data structures, file handling, OOP)</li>
-            <li><i class="fab fa-java"></i> Java (OOP, GUI, collections)</li>
-            <li><i class="fab fa-html5"></i> HTML, CSS, basic JavaScript</li>
-            <li><i class="fab fa-git-alt"></i> GitHub and version control</li>
-          </ul>
-        </div>
+  <section id="about" class="animate">
+    <h2 class="section-title fade-up">About Me</h2>
+    <p class="fade-up">I'm Solomon, a passionate developer skilled in Python, JavaScript, cloud engineering and modern web development frameworks.</p>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="animate">
+    <h2 class="section-title fade-up">Blog</h2>
+
+    <div class="blog-container">
+
+      <div class="blog-card slide-left">
+        <h3>What is Cloud Computing?</h3>
+        <p>Cloud computing involves delivering computing services over the internet. It allows storage, servers, networking and more.</p>
       </div>
+
+      <div class="blog-card slide-left">
+        <h3>AI Changing the World</h3>
+        <p>Artificial Intelligence is transforming industries like healthcare, finance, transportation and automation.</p>
+      </div>
+
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="section projects-section animate">
-    <div class="container">
-      <h2 class="section-title">My Projects</h2>
-      <p class="section-subtitle">These projects are under development and will be released soon 🚧</p>
+  <!-- Contact Section -->
+  <section id="contact" class="animate">
+    <h2 class="section-title fade-up">Contact Me</h2>
 
-      <div class="projects-grid">
-
-        <div class="project-card">
-          <div class="project-icon"><i class="fas fa-store"></i></div>
-          <h3>Retail Store Management System (C++)</h3>
-          <p>Console app using linked lists, file I/O, and stock management functions (add, update, remove, search).</p>
-          <div class="project-tags">
-            <span class="tag">C++</span>
-            <span class="tag">File I/O</span>
-            <span class="tag">Data Structures</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-icon"><i class="fas fa-calculator"></i></div>
-          <h3>Calculator GUI (Java Swing)</h3>
-          <p>Graphical calculator built with JFrame supporting arithmetic operations and keyboard input handling.</p>
-          <div class="project-tags">
-            <span class="tag">Java</span>
-            <span class="tag">Swing</span>
-            <span class="tag">GUI</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-icon"><i class="fas fa-globe"></i></div>
-          <h3>Personal Website (HTML & CSS)</h3>
-          <p>This site — a clean multi-page HTML/CSS site deployed with GitHub Pages to present personal information and projects.</p>
-          <div class="project-tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">Responsive Design</span>
-          </div>
-        </div>
-
-      </div>
+    <div class="contact-info fade-up">
+      <p>Email: <strong>bevinashsolomon@gmail.com</strong></p>
+      <p>Phone: <strong>9384143400</strong></p>
+      <p>Location: <strong>India</strong></p>
+      <p>GitHub: <strong>github.com/bevinashsolomon</strong></p>
+      <p>LinkedIn: <strong>linkedin.com/in/bevinash-solomon</strong></p>
     </div>
   </section>
 
-  <!-- Blog -->
-  <section id="blog" class="section blog-section animate">
-    <div class="container">
-      <h2 class="section-title">Blog & Articles</h2>
-      <p class="coming-soon">These posts are under development and will be published soon 🚧</p>
-
-      <div class="blog-grid">
-        <article class="blog-post">
-          <h3>Getting Started with C++</h3>
-          <p>Step-by-step beginner-friendly guide to learning C++ basics, compiling, and running your first program.</p>
-          <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
-        </article>
-
-        <article class="blog-post">
-          <h3>Building a Java GUI Calculator</h3>
-          <p>A practical guide to using Java Swing for creating a simple calculator application with keyboard support.</p>
-          <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
-        </article>
-
-        <article class="blog-post">
-          <h3>Tips for Organizing Your Personal Website</h3>
-          <p>Learn how to structure your website, keep it clean, and create pages that are easy to maintain.</p>
-          <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section contact-section animate">
-    <div class="container">
-      <h2 class="section-title">Contact Me</h2>
-      <p class="section-subtitle">Feel free to reach out through any of the options below.</p>
-
-      <div class="contact-content">
-        <ul class="contact-list">
-          <li><i class="fas fa-envelope"></i><div><strong>Email:</strong> <a href="mailto:solomonfentaw884@gmail.com">solomonfentaw884@gmail.com</a></div></li>
-          <li><i class="fas fa-phone"></i><div><strong>Phone:</strong> <a href="tel:+251914131094">+251 914131094</a></div></li>
-          <li><i class="fas fa-location-dot"></i><div><strong>Location:</strong> <span>Ethiopia</span></div></li>
-          <li><i class="fab fa-linkedin"></i><div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/solomon-fentaw" target="_blank">My LinkedIn</a></div></li>
-          <li><i class="fab fa-github"></i><div><strong>GitHub:</strong> <a href="https://github.com/Henry24-94" target="_blank">My GitHub</a></div></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>© 2025 Solomon — Built with clarity and simplicity.</p>
-      <p>All Rights Reserved</p>
-    </div>
+  <footer>
+    <p>© 2024 Solomon | All Rights Reserved</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
