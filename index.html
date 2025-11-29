@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Solomon | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonts + Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
+  <!-- Theme Toggle -->
+  <div class="theme-toggle">
+    <i class="fas fa-moon"></i>
+  </div>
 
   <!-- Navigation -->
   <nav class="navbar">
-    <div class="nav-container">
+    <div class="nav-container glass">
       <div class="nav-logo"><a href="#home">Solomon</a></div>
+
       <ul class="nav-menu">
         <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
@@ -21,19 +32,24 @@
         <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
         <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-      <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+
+      <!-- Hamburger -->
+      <div class="hamburger">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </div>
     </div>
   </nav>
 
   <!-- Home Section -->
-  <section id="home" class="section home-section animate">
+  <section id="home" class="section home-section animate gradient-bg">
     <div class="container">
-      <div class="home-content">
-        <h1>Welcome To My Personal Website</h1>
+      <div class="home-content glass fade-up">
+        <h1 class="neon-title">Welcome To My Personal Website</h1>
         <p>Created by Solomon — a 3rd-year Computer Science student.</p>
+
         <div class="btn-group">
-          <a href="#projects" class="btn btn-primary">View My Work</a>
-          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          <a href="#projects" class="btn btn-primary neon-btn">View My Work</a>
+          <a href="#contact" class="btn btn-secondary glass-btn">Get In Touch</a>
         </div>
       </div>
     </div>
@@ -41,13 +57,15 @@
 
   <!-- About Section -->
   <section id="about" class="section about-section animate">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
+    <div class="container glass fade-up">
+      <h2 class="section-title neon-title">About Me</h2>
+
       <div class="about-content">
         <div class="about-text">
           <p>Hello! I'm <strong>Solomon</strong>, a 3rd-year Computer Science student with a deep interest in coding, design, and technology. I enjoy building small but useful projects that help me learn real-world programming skills.</p>
           <p>This website is part of my personal journey — it's a space to share what I'm learning, show my projects, and connect with others in tech.</p>
         </div>
+
         <div class="skills">
           <h3>Skills & Tools</h3>
           <ul>
@@ -63,11 +81,13 @@
 
   <!-- Projects Section -->
   <section id="projects" class="section projects-section animate">
-    <div class="container">
-      <h2 class="section-title">My Projects</h2>
+    <div class="container fade-up">
+      <h2 class="section-title neon-title">My Projects</h2>
       <p class="section-subtitle">These projects are under development and will be released soon 🚧</p>
+
       <div class="projects-grid">
-        <div class="project-card">
+
+        <div class="project-card glass card-3d">
           <div class="project-icon"><i class="fas fa-store"></i></div>
           <h3>Retail Store Management System (C++)</h3>
           <p>Console app using linked lists, file I/O, and stock management functions (add, update, remove, search).</p>
@@ -78,7 +98,7 @@
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card glass card-3d">
           <div class="project-icon"><i class="fas fa-calculator"></i></div>
           <h3>Calculator GUI (Java Swing)</h3>
           <p>Graphical calculator built with JFrame supporting arithmetic operations and keyboard input handling.</p>
@@ -89,7 +109,7 @@
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card glass card-3d">
           <div class="project-icon"><i class="fas fa-globe"></i></div>
           <h3>Personal Website (HTML & CSS)</h3>
           <p>This site — a clean multi-page HTML/CSS site deployed with GitHub Pages to present personal information and projects.</p>
@@ -99,42 +119,47 @@
             <span class="tag">Responsive Design</span>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- Blog Section -->
   <section id="blog" class="section blog-section animate">
-    <div class="container">
-      <h2 class="section-title">Blog & Articles</h2>
+    <div class="container glass fade-up">
+      <h2 class="section-title neon-title">Blog & Articles</h2>
       <p class="coming-soon">These posts are under development and will be published soon 🚧</p>
+
       <div class="blog-grid">
-        <article class="blog-post">
+
+        <article class="blog-post card-3d">
           <h3>Getting Started with C++</h3>
           <p>Step-by-step beginner-friendly guide to learning C++ basics, compiling, and running your first program.</p>
           <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
         </article>
 
-        <article class="blog-post">
+        <article class="blog-post card-3d">
           <h3>Building a Java GUI Calculator</h3>
           <p>A practical guide to using Java Swing for creating a simple calculator application with keyboard support.</p>
           <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
         </article>
 
-        <article class="blog-post">
+        <article class="blog-post card-3d">
           <h3>Tips for Organizing Your Personal Website</h3>
           <p>Learn how to structure your website, keep it clean, and create pages that are easy to maintain.</p>
           <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
         </article>
+
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact" class="section contact-section animate">
-    <div class="container">
-      <h2 class="section-title">Contact Me</h2>
+    <div class="container glass fade-up">
+      <h2 class="section-title neon-title">Contact Me</h2>
       <p class="section-subtitle">Feel free to reach out through any of the options below.</p>
+
       <div class="contact-content">
         <ul class="contact-list">
           <li><i class="fas fa-envelope"></i><div><strong>Email:</strong> <a href="mailto:solomonfentaw884@gmail.com">solomonfentaw884@gmail.com</a></div></li>
@@ -144,6 +169,7 @@
           <li><i class="fab fa-github"></i><div><strong>GitHub:</strong> <a href="https://github.com/Henry24-94" target="_blank">My GitHub</a></div></li>
         </ul>
       </div>
+
     </div>
   </section>
 
@@ -156,5 +182,6 @@
   </footer>
 
   <script src="script.js"></script>
+
 </body>
 </html>
