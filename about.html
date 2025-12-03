@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Solomon | Portfolio</title>
+  <title>Solomon | About</title>
 
   <!-- Fonts + Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -15,59 +15,64 @@
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="nav-container">
-    <div class="nav-logo"><a href="home.html">Solomon</a></div>
-
-    <ul class="nav-menu">
-      <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-      <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-      <li class="nav-item"><a class="nav-link" href="blog-articles.html">Blog & Articles</a></li>
-      <li class="nav-item"><a class="nav-link" href="contact.html">Contact Me</a></li>
-    </ul>
-
-    <div class="hamburger">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
+  <!-- Theme Toggle -->
+  <div class="theme-toggle">
+    <i class="fas fa-moon"></i>
   </div>
-</nav>
 
-<!-- ABOUT CONTENT -->
-<section class="section">
-  <h1 class="section-title">About Me</h1>
-  <p class="section-subtitle">Who I am & what I do</p>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container glass">
+      <div class="nav-logo"><a href="index.html">Solomon</a></div>
 
-  <div class="about-content animate">
-    <div class="about-text">
-      <p>
-        I am Solomon, a passionate front-end developer who loves building clean,
-        fast, and modern user interfaces. I enjoy turning ideas into real,
-        interactive experiences with smooth animations and beautiful design.
-      </p>
-      <br>
-      <p>
-        My focus includes modern JavaScript, responsive layouts, component-based
-        structures, and crafting stylish UI with CSS.
-      </p>
-    </div>
-
-    <div class="skills">
-      <h3 style="color: var(--accent); margin-bottom:12px;">Skills</h3>
-      <ul style="list-style: none; padding-left:0; color: var(--subtext);">
-        <li>• HTML5 / CSS3</li>
-        <li>• JavaScript</li>
-        <li>• Responsive Design</li>
-        <li>• UI/UX Layouts</li>
-        <li>• Modern Animations</li>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a href="blog-articles.html" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
-    </div>
-  </div>
-</section>
 
-<script src="script.js"></script>
+      <!-- Hamburger -->
+      <div class="hamburger">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="section about-section animate">
+    <div class="container glass fade-up">
+      <h2 class="section-title neon-title">About Me</h2>
+
+      <div class="about-content">
+        <div class="about-text">
+          <p>Hello! I'm <strong>Solomon</strong>, a 3rd-year Computer Science student with a deep interest in coding, design, and technology. I enjoy building small but useful projects that help me learn real-world programming skills.</p>
+          <p>This website is part of my personal journey — it's a space to share what I'm learning, show my projects, and connect with others in tech.</p>
+        </div>
+
+        <div class="skills">
+          <h3>Skills & Tools</h3>
+          <ul>
+            <li><i class="fas fa-code"></i> C++ (Data structures, file handling, OOP)</li>
+            <li><i class="fab fa-java"></i> Java (OOP, GUI, collections)</li>
+            <li><i class="fab fa-html5"></i> HTML, CSS, basic JavaScript</li>
+            <li><i class="fab fa-git-alt"></i> GitHub and version control</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Solomon — Built with clarity and simplicity.</p>
+      <p>All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
