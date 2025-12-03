@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Solomon | Home</title>
 
@@ -15,40 +15,54 @@
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="nav-container">
-    <div class="nav-logo"><a href="home.html">Solomon</a></div>
-
-    <ul class="nav-menu">
-      <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-      <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-      <li class="nav-item"><a class="nav-link" href="blog-articles.html">Blog & Articles</a></li>
-      <li class="nav-item"><a class="nav-link" href="contact.html">Contact Me</a></li>
-    </ul>
-
-    <div class="hamburger">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
+  <!-- Theme Toggle -->
+  <div class="theme-toggle">
+    <i class="fas fa-moon"></i>
   </div>
-</nav>
 
-<!-- HERO SECTION -->
-<section class="section home-section">
-  <div class="home-content animate">
-    <h1 class="section-title">Hi, I'm Solomon</h1>
-    <p class="section-subtitle">Front-End Developer — building modern, beautiful, responsive web experiences.</p>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container glass">
+      <div class="nav-logo"><a href="index.html">Solomon</a></div>
 
-    <div style="margin-top: 22px;">
-      <a href="projects.html" class="btn btn-primary">View Projects</a>
-      <a href="about.html" class="btn btn-secondary" style="margin-left:10px;">About Me</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a href="blog-articles.html" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="hamburger">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<script src="script.js"></script>
+  <!-- Home Section -->
+  <section id="home" class="section home-section animate gradient-bg">
+    <div class="container">
+      <div class="home-content glass fade-up">
+        <h1 class="neon-title">Welcome To My Personal Website</h1>
+        <p>Created by Solomon — a 3rd-year Computer Science student.</p>
+
+        <div class="btn-group">
+          <a href="projects.html" class="btn btn-primary neon-btn">View My Work</a>
+          <a href="contact.html" class="btn btn-secondary glass-btn">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Solomon — Built with clarity and simplicity.</p>
+      <p>All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
